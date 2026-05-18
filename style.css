@@ -1418,9 +1418,19 @@ input[type="range"] {
     .hero-content h1 {
         font-size: 2.2rem;
     }
-    .service-grid, .partner-categories, .news-grid, .results-grid, .authority-grid {
+    .service-grid, .partner-categories, .news-grid, .results-grid, .authority-grid, .form-row {
         grid-template-columns: 1fr;
         gap: 20px;
+    }
+    .form-row {
+        margin-bottom: 0;
+    }
+    .contact-form-container {
+        padding: 35px 25px;
+    }
+    .contact-form h3 {
+        font-size: 1.8rem;
+        margin-bottom: 30px;
     }
     .news-header {
         flex-direction: column;
