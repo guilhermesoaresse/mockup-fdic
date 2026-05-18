@@ -29,15 +29,22 @@
             <div class="logo">
                 <img src="meta_fidc_logo.png" alt="Meta FIDC Logo" id="main-logo">
             </div>
-            <ul class="nav-links">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#servicos">Serviços</a></li>
-                <li><a href="#mercado">Mercado</a></li>
-                <li><a href="#contato">Contato</a></li>
-            </ul>
-            <div class="portal-access" style="display: flex; gap: 15px; align-items: center;">
-                <a href="http://mtafidc.ddns.com.br:8080/netFactor/jsp/nfrInicia.jsp" target="_blank" class="btn-portal">Portal Cedente</a>
-                <a href="http://mtafidc.ddns.com.br:8080/netFactor/jsp/nfdInicia.jsp" target="_blank" class="btn-portal" style="background: transparent; border: 1px solid var(--glass-border); color: var(--text-light);">Portal Debenturista</a>
+            <button class="mobile-menu-toggle" aria-label="Abrir menu mobile">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <div class="nav-menu-wrapper">
+                <ul class="nav-links">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#servicos">Serviços</a></li>
+                    <li><a href="#mercado">Mercado</a></li>
+                    <li><a href="#contato">Contato</a></li>
+                </ul>
+                <div class="portal-access" style="display: flex; gap: 15px; align-items: center;">
+                    <a href="http://mtafidc.ddns.com.br:8080/netFactor/jsp/nfrInicia.jsp" target="_blank" class="btn-portal">Portal Cedente</a>
+                    <a href="http://mtafidc.ddns.com.br:8080/netFactor/jsp/nfdInicia.jsp" target="_blank" class="btn-portal" style="background: transparent; border: 1px solid var(--glass-border); color: var(--text-light);">Portal Debenturista</a>
+                </div>
             </div>
         </nav>
     </header>
@@ -527,6 +534,25 @@
         fetchMarketNews();
         setInterval(fetchMarketData, 30000);
         setInterval(fetchMarketNews, 300000); // Atualiza notícias a cada 5 minutos
+
+        // Controle do Menu Sanduíche Mobile
+        const menuToggle = document.querySelector('.mobile-menu-toggle');
+        const navWrapper = document.querySelector('.nav-menu-wrapper');
+        const navLinksItems = document.querySelectorAll('.nav-menu-wrapper a');
+
+        if (menuToggle && navWrapper) {
+            menuToggle.addEventListener('click', () => {
+                menuToggle.classList.toggle('open');
+                navWrapper.classList.toggle('open');
+            });
+
+            navLinksItems.forEach(link => {
+                link.addEventListener('click', () => {
+                    menuToggle.classList.remove('open');
+                    navWrapper.classList.remove('open');
+                });
+            });
+        }
     </script>
 </body>
 
