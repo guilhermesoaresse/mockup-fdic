@@ -17,12 +17,15 @@
     box-sizing: border-box;
 }
 
-body {
+html, body {
     font-family: 'Inter', sans-serif;
     background-color: var(--primary-dark);
     color: var(--text-light);
     line-height: 1.6;
     overflow-x: hidden;
+    width: 100%;
+    position: relative;
+    -webkit-text-size-adjust: 100%;
 }
 
 /* Ticker */
@@ -867,6 +870,9 @@ input[type="range"] {
     font-size: 1rem;
     transition: 0.3s;
     outline: none;
+    -webkit-appearance: none;
+    appearance: none;
+    box-sizing: border-box;
 }
 
 .field textarea {
@@ -1385,21 +1391,31 @@ input[type="range"] {
     }
 }
 
+@-webkit-keyframes mobileMarquee {
+    0% { -webkit-transform: translateX(100vw); transform: translateX(100vw); }
+    100% { -webkit-transform: translateX(-100%); transform: translateX(-100%); }
+}
 @keyframes mobileMarquee {
-    0% { transform: translateX(100vw); }
-    100% { transform: translateX(-100%); }
+    0% { -webkit-transform: translateX(100vw); transform: translateX(100vw); }
+    100% { -webkit-transform: translateX(-100%); transform: translateX(-100%); }
 }
 
 @media (max-width: 768px) {
     /* Ajustes específicos para iPhone / Telas menores */
     .ticker-wrap {
         height: 32px;
+        width: 100vw;
+        max-width: 100%;
         overflow: hidden;
         justify-content: flex-start;
+        box-sizing: border-box;
     }
     .ticker {
+        display: flex;
         width: max-content;
+        -webkit-animation: mobileMarquee 25s linear infinite;
         animation: mobileMarquee 25s linear infinite;
+        will-change: transform;
         padding: 0;
         gap: 30px;
     }
