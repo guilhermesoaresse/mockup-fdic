@@ -412,42 +412,52 @@
 
         async function fetchMarketData() {
             try {
-                // Moedas e Índices (HG Brasil com CORS)
-                const hgResponse = await fetch('https://api.hgbrasil.com/finance?format=json-cors');
-                const hgData = await hgResponse.json();
-                const results = hgData.results;
+                // 1. Moedas (AwesomeAPI - 100% estável e sem bloqueio de CORS no GitHub Pages)
+                const moedasRes = await fetch('https://economia.awesomeapi.com.br/last/USD-BRL,EUR-BRL');
+                const moedasData = await moedasRes.json();
+                const usd = moedasData.USDBRL;
+                const eur = moedasData.EURBRL;
 
-                const usd = results.currencies.USD;
-                const eur = results.currencies.EUR;
-                const ibov = results.stocks.IBOVESPA;
-                const nasdaq = results.stocks.NASDAQ;
+                updateTicker('ticker-usd', `R$ ${parseFloat(usd.bid).toFixed(2)}`, usd.pctChange);
+                updateTicker('ticker-eur', `R$ ${parseFloat(eur.bid).toFixed(2)}`, eur.pctChange);
 
-                updateTicker('ticker-usd', `R$ ${parseFloat(usd.buy).toFixed(2)}`, usd.variation);
-                updateTicker('ticker-eur', `R$ ${parseFloat(eur.buy).toFixed(2)}`, eur.variation);
-                
-                // Formatação de pontos para IBOVESPA e NASDAQ (ex: 128.450)
-                const formatPoints = (pts) => Math.round(pts).toLocaleString('pt-BR');
-                
-                updateTicker('ticker-ibov', formatPoints(ibov.points), ibov.variation);
-                updateTicker('ticker-nasdaq', formatPoints(nasdaq.points), nasdaq.variation);
-
-                // Taxas (Banco Central) - Selic Meta (432) e CDI Anualizado (4389)
+                // 2. Taxas (Banco Central do Brasil - Oficial e sem bloqueio)
                 const [selicRes, cdiRes] = await Promise.all([
                     fetch('https://api.bcb.gov.br/dados/serie/bcdata.sgs.432/dados/ultimos/1?formato=json'),
                     fetch('https://api.bcb.gov.br/dados/serie/bcdata.sgs.4389/dados/ultimos/1?formato=json')
                 ]);
-
                 const selicData = await selicRes.json();
                 const cdiData = await cdiRes.json();
 
                 if (selicData[0]) document.getElementById('ticker-selic').innerText = `${parseFloat(selicData[0].valor).toFixed(2)}%`;
                 if (cdiData[0]) document.getElementById('ticker-cdi').innerText = `${parseFloat(cdiData[0].valor).toFixed(2)}%`;
 
+                // 3. Índices de Ações (HG Brasil via Proxy AllOrigins para contornar bloqueio de Origin no GitHub Pages)
+                try {
+                    const hgUrl = encodeURIComponent('https://api.hgbrasil.com/finance?format=json-cors');
+                    const proxyRes = await fetch(`https://api.allorigins.win/get?url=${hgUrl}`);
+                    const proxyData = await proxyRes.json();
+                    const hgData = JSON.parse(proxyData.contents);
+                    const stocks = hgData.results.stocks;
+
+                    const formatPoints = (pts) => Math.round(pts).toLocaleString('pt-BR');
+                    updateTicker('ticker-ibov', formatPoints(stocks.IBOVESPA.points), stocks.IBOVESPA.variation);
+                    updateTicker('ticker-nasdaq', formatPoints(stocks.NASDAQ.points), stocks.NASDAQ.variation);
+                } catch (stockErr) {
+                    console.warn('Erro ao buscar índices via proxy, usando fallback estático para IBOV e NASDAQ:', stockErr);
+                    updateTicker('ticker-ibov', '128.450', '0.35');
+                    updateTicker('ticker-nasdaq', '18.230', '0.85');
+                }
+
             } catch (error) {
-                console.error('Erro ao buscar dados de mercado:', error);
-                // Fallback de segurança caso a API externa falhe temporariamente
-                updateTicker('ticker-ibov', '132.450', '0.45');
+                console.error('Erro geral ao buscar dados de mercado:', error);
+                // Fallback completo de segurança caso o usuário esteja totalmente offline
+                updateTicker('ticker-usd', 'R$ 5.02', '-0.45');
+                updateTicker('ticker-eur', 'R$ 5.82', '+0.12');
+                updateTicker('ticker-ibov', '128.450', '0.35');
                 updateTicker('ticker-nasdaq', '18.230', '0.85');
+                document.getElementById('ticker-selic').innerText = '10.50%';
+                document.getElementById('ticker-cdi').innerText = '10.40%';
             }
         }
 
