@@ -472,7 +472,7 @@
 
         async function fetchMarketNews() {
             try {
-                const response = await fetch('https://api.rss2json.com/v1/api.json?rss_url=https://www.infomoney.com.br/feed/');
+                const response = await fetch('https://api.rss2json.com/v1/api.json?rss_url=https://www.infomoney.com.br/mercados/feed/');
                 const data = await response.json();
                 
                 if (data.status === 'ok' && data.items.length > 0) {
