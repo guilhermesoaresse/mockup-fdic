@@ -440,42 +440,58 @@
                 if (cdiData[0]) document.getElementById('ticker-cdi').innerText = `${parseFloat(cdiData[0].valor).toFixed(2)}%`;
 
                 // 3. Índices de Ações (Yahoo Finance via Proxy AllOrigins como fonte primária + HG Brasil como fallback)
+                // 3. Índices de Ações (Tripla Camada de Redundância: Brapi -> Yahoo Finance -> HG Brasil)
+                const formatPoints = (pts) => Math.round(pts).toLocaleString('pt-BR');
                 try {
-                    const formatPoints = (pts) => Math.round(pts).toLocaleString('pt-BR');
+                    // TENTATIVA 1: Brapi (Especializada no Brasil, entrega pontos e variação prontos)
+                    const brapiUrl = encodeURIComponent('https://brapi.dev/api/quote/^BVSP,^IXIC');
+                    const brapiRes = await fetch(`https://api.allorigins.win/get?url=${brapiUrl}`);
+                    const brapiProxy = await brapiRes.json();
+                    const brapiData = JSON.parse(brapiProxy.contents);
                     
-                    // Busca IBOVESPA (^BVSP) no Yahoo Finance
-                    const ibovUrl = encodeURIComponent('https://query1.finance.yahoo.com/v8/finance/chart/^BVSP?interval=1d');
-                    const ibovRes = await fetch(`https://api.allorigins.win/get?url=${ibovUrl}`);
-                    const ibovProxy = await ibovRes.json();
-                    const ibovData = JSON.parse(ibovProxy.contents);
-                    const ibovMeta = ibovData.chart.result[0].meta;
-                    const ibovChange = ((ibovMeta.regularMarketPrice - ibovMeta.previousClose) / ibovMeta.previousClose) * 100;
-                    updateTicker('ticker-ibov', formatPoints(ibovMeta.regularMarketPrice), ibovChange);
-
-                    // Busca NASDAQ (^IXIC) no Yahoo Finance
-                    const nasdaqUrl = encodeURIComponent('https://query1.finance.yahoo.com/v8/finance/chart/^IXIC?interval=1d');
-                    const nasdaqRes = await fetch(`https://api.allorigins.win/get?url=${nasdaqUrl}`);
-                    const nasdaqProxy = await nasdaqRes.json();
-                    const nasdaqData = JSON.parse(nasdaqProxy.contents);
-                    const nasdaqMeta = nasdaqData.chart.result[0].meta;
-                    const nasdaqChange = ((nasdaqMeta.regularMarketPrice - nasdaqMeta.previousClose) / nasdaqMeta.previousClose) * 100;
-                    updateTicker('ticker-nasdaq', formatPoints(nasdaqMeta.regularMarketPrice), nasdaqChange);
-
-                } catch (yahooErr) {
-                    console.warn('Yahoo Finance falhou, tentando fallback secundário via HG Brasil...', yahooErr);
+                    const ibov = brapiData.results.find(r => r.symbol === '^BVSP');
+                    const nasdaq = brapiData.results.find(r => r.symbol === '^IXIC');
+                    
+                    if (ibov && nasdaq) {
+                        updateTicker('ticker-ibov', formatPoints(ibov.regularMarketPrice), ibov.regularMarketChangePercent);
+                        updateTicker('ticker-nasdaq', formatPoints(nasdaq.regularMarketPrice), nasdaq.regularMarketChangePercent);
+                    } else {
+                        throw new Error('Dados incompletos na Brapi');
+                    }
+                } catch (brapiErr) {
+                    console.warn('Brapi falhou, tentando TENTATIVA 2 via Yahoo Finance...', brapiErr);
                     try {
-                        const hgUrl = encodeURIComponent('https://api.hgbrasil.com/finance?format=json-cors');
-                        const proxyRes = await fetch(`https://api.allorigins.win/get?url=${hgUrl}`);
-                        const proxyData = await proxyRes.json();
-                        const hgData = JSON.parse(proxyData.contents);
-                        const stocks = hgData.results.stocks;
-                        const formatPoints = (pts) => Math.round(pts).toLocaleString('pt-BR');
-                        updateTicker('ticker-ibov', formatPoints(stocks.IBOVESPA.points), stocks.IBOVESPA.variation);
-                        updateTicker('ticker-nasdaq', formatPoints(stocks.NASDAQ.points), stocks.NASDAQ.variation);
-                    } catch (hgErr) {
-                        console.warn('Ambas as APIs falharam, usando fallback estático de segurança para IBOV e NASDAQ:', hgErr);
-                        updateTicker('ticker-ibov', '128.450', '0.35');
-                        updateTicker('ticker-nasdaq', '18.230', '0.85');
+                        // TENTATIVA 2: Yahoo Finance (Utilizando chartPreviousClose para evitar NaN)
+                        const ibovUrl = encodeURIComponent('https://query1.finance.yahoo.com/v8/finance/chart/^BVSP?interval=1d');
+                        const ibovRes = await fetch(`https://api.allorigins.win/get?url=${ibovUrl}`);
+                        const ibovProxy = await ibovRes.json();
+                        const ibovData = JSON.parse(ibovProxy.contents);
+                        const ibovMeta = ibovData.chart.result[0].meta;
+                        const ibovChange = ((ibovMeta.regularMarketPrice - ibovMeta.chartPreviousClose) / ibovMeta.chartPreviousClose) * 100;
+                        updateTicker('ticker-ibov', formatPoints(ibovMeta.regularMarketPrice), ibovChange);
+
+                        const nasdaqUrl = encodeURIComponent('https://query1.finance.yahoo.com/v8/finance/chart/^IXIC?interval=1d');
+                        const nasdaqRes = await fetch(`https://api.allorigins.win/get?url=${nasdaqUrl}`);
+                        const nasdaqProxy = await nasdaqRes.json();
+                        const nasdaqData = JSON.parse(nasdaqProxy.contents);
+                        const nasdaqMeta = nasdaqData.chart.result[0].meta;
+                        const nasdaqChange = ((nasdaqMeta.regularMarketPrice - nasdaqMeta.chartPreviousClose) / nasdaqMeta.chartPreviousClose) * 100;
+                        updateTicker('ticker-nasdaq', formatPoints(nasdaqMeta.regularMarketPrice), nasdaqChange);
+                    } catch (yahooErr) {
+                        console.warn('Yahoo Finance falhou, tentando TENTATIVA 3 via HG Brasil...', yahooErr);
+                        try {
+                            const hgUrl = encodeURIComponent('https://api.hgbrasil.com/finance?format=json-cors');
+                            const proxyRes = await fetch(`https://api.allorigins.win/get?url=${hgUrl}`);
+                            const proxyData = await proxyRes.json();
+                            const hgData = JSON.parse(proxyData.contents);
+                            const stocks = hgData.results.stocks;
+                            updateTicker('ticker-ibov', formatPoints(stocks.IBOVESPA.points), stocks.IBOVESPA.variation);
+                            updateTicker('ticker-nasdaq', formatPoints(stocks.NASDAQ.points), stocks.NASDAQ.variation);
+                        } catch (hgErr) {
+                            console.warn('Todas as APIs falharam, ativando fallback estático de segurança:', hgErr);
+                            updateTicker('ticker-ibov', '128.450', '0.35');
+                            updateTicker('ticker-nasdaq', '18.230', '0.85');
+                        }
                     }
                 }
 
