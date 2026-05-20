@@ -37,7 +37,8 @@
             <div class="nav-menu-wrapper">
                 <ul class="nav-links">
                     <li><a href="#home">Home</a></li>
-                    <li><a href="#servicos">Serviços</a></li>
+                    <li><a href="#produtos">Produtos</a></li>
+                    <li><a href="#servicos">Diferenciais</a></li>
                     <li><a href="#mercado">Mercado</a></li>
                     <li><a href="#contato">Contato</a></li>
                 </ul>
@@ -64,8 +65,7 @@
                     </div>
                 </div>
                 <div class="hero-actions">
-                    <button class="btn-primary">Conhecer Produtos</button>
-                    <button class="btn-secondary">Falar com Consultor</button>
+                    <button class="btn-primary" onclick="document.getElementById('contato').scrollIntoView({behavior: 'smooth'})">Falar com Consultor</button>
                 </div>
             </div>
             <div class="hero-visual">
@@ -89,7 +89,73 @@
             </div>
         </section>
 
-        <section id="servicos" class="services">
+        <section id="produtos" class="services">
+            <h2 class="section-title" data-aos="fade-up">Nossos Produtos</h2>
+            
+            <!-- 1. Antecipação de Recebíveis -->
+            <div class="product-row" data-aos="fade-up">
+                <div class="product-text">
+                    <span class="product-tag">Liquidez Imediata</span>
+                    <h3>Antecipação de Recebíveis</h3>
+                    <p>Antecipar recebíveis é transformar vendas a prazo em capital imediato. Na Meta FIDC, essa solução é oferecida com agilidade, segurança e condições personalizadas — ajudando empresas a manterem sua operação saudável e com liquidez, sem recorrer a empréstimos tradicionais.</p>
+                    <button class="btn-primary" onclick="document.getElementById('contato').scrollIntoView({behavior: 'smooth'})">Veja mais</button>
+                </div>
+                <div class="product-image">
+                    <img src="public/meta_fidc_team_work.png" alt="Antecipação de Recebíveis - Equipe Meta FIDC">
+                </div>
+            </div>
+
+            <!-- 2. Investimento -->
+            <div class="product-row reverse" data-aos="fade-up">
+                <div class="product-image">
+                    <img src="public/meta_fidc_meeting_boardroom.png" alt="Fundo de Investimento - Meta FIDC">
+                </div>
+                <div class="product-text">
+                    <span class="product-tag">Rentabilidade e Lastro</span>
+                    <h3>Investimento</h3>
+                    <p>A Meta FIDC opera através de Fundo de Investimento em Direitos Creditórios (FIDC) — que é também uma alternativa de renda fixa que une rentabilidade acima do CDI com lastro em operações reais da economia.</p>
+                    <button class="btn-primary" onclick="document.getElementById('contato').scrollIntoView({behavior: 'smooth'})">Veja mais</button>
+                </div>
+            </div>
+
+            <!-- 3 & 4. Conta Vinculada & Conta Vinculada Flex -->
+            <div class="product-cards-grid">
+                <div class="product-card" data-aos="fade-up">
+                    <div class="product-card-header">
+                        <h3>Conta Vinculada</h3>
+                    </div>
+                    <div class="product-card-body">
+                        <p>A Conta Vinculada Meta FIDC é uma solução criada para facilitar operações em que o controle sobre o recebimento é essencial, oferecendo previsibilidade e gestão integrada dos fluxos financeiros.</p>
+                        <div class="product-card-actions">
+                            <button class="btn-primary" onclick="document.getElementById('contato').scrollIntoView({behavior: 'smooth'})">ABRA SUA CONTA</button>
+                            <button class="btn-saiba-mais" onclick="document.getElementById('contato').scrollIntoView({behavior: 'smooth'})">
+                                Saiba mais
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card" data-aos="fade-up">
+                    <div class="product-card-header">
+                        <h3>Conta Vinculada Flex</h3>
+                    </div>
+                    <div class="product-card-body">
+                        <p>A Conta Vinculada Flex é uma evolução da Conta Vinculada tradicional, oferecendo ainda mais liberdade e controle sobre os recursos antecipados, sob medida para a dinâmica de sua empresa.</p>
+                        <div class="product-card-actions">
+                            <button class="btn-primary" onclick="document.getElementById('contato').scrollIntoView({behavior: 'smooth'})">ABRA SUA CONTA</button>
+                            <button class="btn-saiba-mais" onclick="document.getElementById('contato').scrollIntoView({behavior: 'smooth'})">
+                                Saiba mais
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção Diferenciais Restabelecida -->
+        <section id="servicos" class="services" style="padding-top: 50px; background: rgba(255,255,255,0.01); border-top: 1px solid var(--glass-border); border-bottom: 1px solid var(--glass-border);">
             <h2 class="section-title" data-aos="fade-up">Soluções que Geram Resultado</h2>
             <div class="service-grid">
                 <div class="service-card" data-aos="fade-up">
@@ -111,23 +177,24 @@
         </section>
 
         <section class="authority">
-            <div class="authority-grid">
-                <div class="auth-text">
-                    <h2 class="section-title left">Respaldo Financeiro e Solidez Corporativa</h2>
-                    <p>A Meta FIDC não é apenas uma empresa de antecipação; somos um parceiro estratégico com profundo
-                        conhecimento do sistema financeiro nacional. Nossa estrutura permite agilidade na ponta e
-                        segurança na governança.</p>
-                    <ul class="auth-list">
-                        <li>📍 Sede em Porto Alegre (Av. Nilo Peçanha, 3255)</li>
-                        <li>🛡️ Rigorosos processos de Compliance e Auditoria</li>
-                        <li>🛠️ Tecnologia proprietária para gestão de recebíveis</li>
-                    </ul>
-                </div>
-                <div class="auth-visual">
-                    <div class="auth-box">
-                        <h3>Estrutura de Fundo</h3>
-                        <p>Fundo de Investimento em Direitos Creditórios com governança robusta e transparência total
-                            para investidores e cedentes.</p>
+            <div class="authority-centered" data-aos="fade-up">
+                <h2 class="section-title">Respaldo Financeiro e Solidez Corporativa</h2>
+                <p class="auth-lead">A Meta FIDC não é apenas uma empresa de antecipação; somos um parceiro estratégico com profundo conhecimento do sistema financeiro nacional. Nossa estrutura permite agilidade na ponta e segurança na governança.</p>
+                
+                <div class="auth-badges">
+                    <div class="auth-badge-card">
+                        <div class="badge-icon">📍</div>
+                        <div class="badge-info">
+                            <h4>Sede Porto Alegre</h4>
+                            <p>Av. Nilo Peçanha, 3245 - Salas 911 e 912</p>
+                        </div>
+                    </div>
+                    <div class="auth-badge-card">
+                        <div class="badge-icon">🛠️</div>
+                        <div class="badge-info">
+                            <h4>Tecnologia de Ponta</h4>
+                            <p>Tecnologia proprietária para gestão de recebíveis</p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -137,7 +204,7 @@
             <h2 class="section-title" data-aos="fade-up">Ecossistema de Governança</h2>
             <div class="partner-categories" data-aos="fade-up">
                 <div class="partner-cat-box">
-                    <h4>Administração</h4>
+                    <h4>Administração e Custódia</h4>
                     <div class="partner-items-grid">
                         <a href="https://qitech.com.br" target="_blank" class="partner-card-mini">
                             <img src="public/QiTECh.svg" alt="QI Tech Logo" style="max-height: 40px; width: auto; object-fit: contain; margin-bottom: 5px;">
@@ -152,12 +219,12 @@
                         <div class="partner-card-mini" style="cursor: default;">
                             <img src="public/gestor de ativos-jk.jpg" alt="JK Cobrança Logo" style="max-height: 45px; width: auto; object-fit: contain; margin-bottom: 5px; border-radius: 50%;">
                             <strong>JK Cobrança</strong>
-                            <span>Consultora de crédito</span>
+                            <span>Consultoria de crédito e cobrança</span>
                         </div>
                         <a href="https://terconbr.com.br/" target="_blank" class="partner-card-mini">
                             <img src="public/logo-tercon-branco.png" alt="Tercon Asset Logo" style="max-height: 40px; width: auto; object-fit: contain; margin-bottom: 5px;">
                             <strong>Tercon Asset</strong>
-                            <span>Gestor e Estruturador</span>
+                            <span>Gestora e estruturadora</span>
                         </a>
                     </div>
                 </div>
@@ -169,10 +236,6 @@
                             <strong>Order By</strong>
                             <span>Tecnologia e Gestão</span>
                         </a>
-                        <div class="partner-card-mini" style="cursor: default;">
-                            <strong>WBA / netFactor</strong>
-                            <span>Plataforma de Gestão FIDC</span>
-                        </div>
                     </div>
                 </div>
                 <div class="partner-cat-box">
@@ -250,15 +313,13 @@
     </main>
 
     <section id="contato" class="contact-section">
-        <div class="contact-stats" data-aos="fade-up">
-            <h2>O Spread que impulsiona sua empresa.</h2>
-            <p>Nossa inteligência financeira permite taxas competitivas e agilidade que bancos tradicionais não
-                conseguem entregar.</p>
+        <div class="contact-visual-wrapper" data-aos="fade-up">
+            <img src="public/meta_fidc_contact_visual.png" alt="Meta FIDC Crescimento Financeiro" class="contact-visual-img">
         </div>
 
         <div class="contact-form-container" data-aos="fade-up">
             <form class="contact-form" id="main-contact-form">
-                <h3>Inicie sua operação</h3>
+                <h3>Seja nosso cliente</h3>
                 <div class="form-row">
                     <div class="field">
                         <input type="text" id="name" placeholder=" " required>
@@ -293,7 +354,7 @@
                     <label for="message">Fale sobre sua necessidade...</label>
                 </div>
                 <button type="submit" class="btn-submit">
-                    SOLICITAR ANÁLISE ESTRATÉGICA
+                    ABRA SUA CONTA
                     <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                         stroke-linecap="round" stroke-linejoin="round">
                         <line x1="5" y1="12" x2="19" y2="12"></line>
@@ -307,26 +368,34 @@
     <section id="localizacao" class="map-section" data-aos="fade-up">
         <div class="map-header">
             <h2>Sede Corporativa</h2>
-            <p>Venha tomar um café conosco e estruturar o futuro financeiro da sua empresa em nosso escritório central.</p>
         </div>
+
+        <div class="office-coffee-banner" data-aos="fade-up">
+            <div class="coffee-overlay"></div>
+            <div class="coffee-text-box">
+                <h3>HOM Nilo Business</h3>
+                <p>Agende uma visita e venha tomar um café conosco para estruturarmos a melhor solução financeira para sua empresa.</p>
+            </div>
+        </div>
+
         <div class="map-card-container">
             <div class="map-wrapper">
-                <iframe src="https://maps.google.com/maps?q=Av.+Nilo+Pe%C3%A7anha,+3255+-+Porto+Alegre&t=m&z=16&output=embed&iwloc=near" width="100%" height="380" style="border:0; border-radius: 16px; filter: invert(90%) hue-rotate(180deg) contrast(120%);" allowfullscreen="" loading="lazy"></iframe>
+                <iframe src="https://maps.google.com/maps?q=Av.+Nilo+Pe%C3%A7anha,+3245+-+Porto+Alegre&t=m&z=16&output=embed&iwloc=near" width="100%" height="380" style="border:0; border-radius: 16px; filter: invert(90%) hue-rotate(180deg) contrast(120%);" allowfullscreen="" loading="lazy"></iframe>
             </div>
             <div class="map-info-actions">
                 <div class="map-address-box">
                     <span class="map-icon">📍</span>
                     <div>
-                        <h4>Edifício Carlos Gomes Center</h4>
-                        <p>Av. Nilo Peçanha, 3255 - Sala 911<br>Bela Vista, Porto Alegre - RS, 91330-001</p>
+                        <h4>HOM Nilo Business</h4>
+                        <p>Av. Nilo Peçanha, 3245 - Salas 911 e 912<br>Chácara das Pedras, Porto Alegre - RS, 91330-001</p>
                     </div>
                 </div>
                 <div class="map-buttons">
-                    <a href="https://maps.google.com/?q=Av.+Nilo+Pe%C3%A7anha,+3255+-+Porto+Alegre" target="_blank" class="btn-map google-maps">
+                    <a href="https://maps.google.com/?q=Av.+Nilo+Pe%C3%A7anha,+3245+-+Porto+Alegre" target="_blank" class="btn-map google-maps">
                         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
                         Abrir no Google Maps
                     </a>
-                    <a href="https://waze.com/ul?q=Av.+Nilo+Pe%C3%A7anha,+3255+-+Porto+Alegre&navigate=yes" target="_blank" class="btn-map waze">
+                    <a href="https://waze.com/ul?q=Av.+Nilo+Pe%C3%A7anha,+3245&navigate=yes" target="_blank" class="btn-map waze">
                         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><path d="M8 12h8"></path><path d="M12 8v8"></path></svg>
                         Navegar pelo Waze
                     </a>
@@ -342,16 +411,13 @@
             <div class="footer-col brand-col">
                 <img src="meta_fidc_logo.png" alt="Meta FIDC Logo" class="footer-logo-img">
                 <p class="brand-desc">Mais de uma década impulsionando grandes empresas com inteligência financeira, solidez de governança e agilidade estratégica.</p>
-                <div class="regulatory-badges">
-                    <span class="reg-badge">Autorizado CVM</span>
-                    <span class="reg-badge">Código ANBIMA</span>
-                </div>
             </div>
             <div class="footer-col nav-col">
                 <h4>Navegação</h4>
                 <ul>
                     <li><a href="#home">Home</a></li>
-                    <li><a href="#servicos">Serviços</a></li>
+                    <li><a href="#produtos">Produtos</a></li>
+                    <li><a href="#servicos">Diferenciais</a></li>
                     <li><a href="#mercado">Mercado</a></li>
                     <li><a href="#contato">Contato</a></li>
                 </ul>
@@ -365,19 +431,14 @@
             </div>
             <div class="footer-col contact-col">
                 <h4>Sede Corporativa</h4>
-                <p class="contact-item"><span class="icon">📍</span> Av. Nilo Peçanha, 3255 - Sala 911 <br> Bela Vista, Porto Alegre - RS</p>
-                <p class="contact-item"><span class="icon">📞</span> (51) 3328-1002</p>
+                <p class="contact-item"><span class="icon">📍</span> Av. Nilo Peçanha, 3245 - Salas 911 e 912 <br> HOM Nilo Business, Porto Alegre - RS</p>
+                <p class="contact-item"><span class="icon">📞</span> (51) 3391.3020 / (51) 3391.4020</p>
                 <p class="contact-item"><span class="icon">✉️</span> contato@metafidc.com.br</p>
             </div>
         </div>
         <div class="footer-bottom">
             <div class="footer-bottom-content">
                 <p class="copyright">&copy; 2026 Grupo Meta | Meta FIDC. Todos os direitos reservados.</p>
-                <div class="legal-links">
-                    <a href="#">Política de Privacidade</a>
-                    <a href="#">Termos de Uso</a>
-                    <a href="#">Compliance</a>
-                </div>
             </div>
             <div class="disclaimer">
                 <p>*Fundo de Investimento em Direitos Creditórios regulado pela CVM. Fundos de investimento não contam com garantia do administrador, do gestor da carteira, de qualquer mecanismo de seguro ou do Fundo Garantidor de Créditos - FGC.</p>
