@@ -45,6 +45,7 @@
                 <div class="portal-access" style="display: flex; gap: 15px; align-items: center;">
                     <a href="http://mtafidc.ddns.com.br:8080/netFactor/jsp/nfrInicia.jsp" target="_blank" class="btn-portal">Portal Cedente</a>
                     <a href="http://mtafidc.ddns.com.br:8080/netFactor/jsp/nfdInicia.jsp" target="_blank" class="btn-portal" style="background: transparent; border: 1px solid var(--glass-border); color: var(--text-light);">Portal Debenturista</a>
+                    <a href="https://investor-dash.qidtvm.com.br/" target="_blank" class="btn-portal" style="background: transparent; border: 1px solid var(--glass-border); color: var(--text-light);">Portal Cotista</a>
                 </div>
             </div>
         </nav>
@@ -92,36 +93,47 @@
         <section id="produtos" class="services">
             <h2 class="section-title" data-aos="fade-up">Nossos Produtos</h2>
             
-            <!-- 1. Antecipação de Recebíveis -->
-            <div class="product-row" data-aos="fade-up">
-                <div class="product-text">
-                    <span class="product-tag">Liquidez Imediata</span>
-                    <h3>Antecipação de Recebíveis</h3>
-                    <p>Antecipar recebíveis é transformar vendas a prazo em capital imediato. Na Meta FIDC, essa solução é oferecida com agilidade, segurança e condições personalizadas — ajudando empresas a manterem sua operação saudável e com liquidez, sem recorrer a empréstimos tradicionais.</p>
-                    <button class="btn-primary" onclick="document.getElementById('contato').scrollIntoView({behavior: 'smooth'})">Veja mais</button>
-                </div>
-                <div class="product-image">
-                    <img src="public/meta_fidc_team_work.png" alt="Antecipação de Recebíveis - Equipe Meta FIDC">
-                </div>
-            </div>
-
-            <!-- 2. Investimento -->
-            <div class="product-row reverse" data-aos="fade-up">
-                <div class="product-image">
-                    <img src="public/meta_fidc_meeting_boardroom.png" alt="Fundo de Investimento - Meta FIDC">
-                </div>
-                <div class="product-text">
-                    <span class="product-tag">Rentabilidade e Lastro</span>
-                    <h3>Investimento</h3>
-                    <p>A Meta FIDC opera através de Fundo de Investimento em Direitos Creditórios (FIDC) — que é também uma alternativa de renda fixa que une rentabilidade acima do CDI com lastro em operações reais da economia.</p>
-                    <button class="btn-primary" onclick="document.getElementById('contato').scrollIntoView({behavior: 'smooth'})">Veja mais</button>
-                </div>
-            </div>
-
-            <!-- 3 & 4. Conta Vinculada & Conta Vinculada Flex -->
             <div class="product-cards-grid">
+                <!-- 1. Antecipação de Recebíveis -->
                 <div class="product-card" data-aos="fade-up">
                     <div class="product-card-header">
+                        <span class="product-tag-badge">Liquidez Imediata</span>
+                        <h3>Antecipação de Recebíveis</h3>
+                    </div>
+                    <div class="product-card-body">
+                        <p>Antecipar recebíveis é transformar vendas a prazo em capital imediato. Na Meta FIDC, essa solução é oferecida com agilidade, segurança e condições personalizadas — ajudando empresas a manterem sua operação saudável e com liquidez, sem recorrer a empréstimos tradicionais.</p>
+                        <div class="product-card-actions">
+                            <button class="btn-primary" onclick="document.getElementById('contato').scrollIntoView({behavior: 'smooth'})">ABRA SUA CONTA</button>
+                            <button class="btn-saiba-mais" onclick="document.getElementById('contato').scrollIntoView({behavior: 'smooth'})">
+                                Saiba mais
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 2. Investimento -->
+                <div class="product-card" data-aos="fade-up">
+                    <div class="product-card-header">
+                        <span class="product-tag-badge">Rentabilidade e Lastro</span>
+                        <h3>Investimento</h3>
+                    </div>
+                    <div class="product-card-body">
+                        <p>A Meta FIDC opera através de Fundo de Investimento em Direitos Creditórios (FIDC) — que é também uma alternativa de renda fixa que une rentabilidade acima do CDI com lastro em operações reais da economia.</p>
+                        <div class="product-card-actions">
+                            <button class="btn-primary" onclick="document.getElementById('contato').scrollIntoView({behavior: 'smooth'})">ABRA SUA CONTA</button>
+                            <button class="btn-saiba-mais" onclick="document.getElementById('contato').scrollIntoView({behavior: 'smooth'})">
+                                Saiba mais
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 3. Conta Vinculada -->
+                <div class="product-card" data-aos="fade-up">
+                    <div class="product-card-header">
+                        <span class="product-tag-badge">Segurança e Controle</span>
                         <h3>Conta Vinculada</h3>
                     </div>
                     <div class="product-card-body">
@@ -136,8 +148,10 @@
                     </div>
                 </div>
 
+                <!-- 4. Conta Vinculada Flex -->
                 <div class="product-card" data-aos="fade-up">
                     <div class="product-card-header">
+                        <span class="product-tag-badge">Flexibilidade Operacional</span>
                         <h3>Conta Vinculada Flex</h3>
                     </div>
                     <div class="product-card-body">
@@ -427,6 +441,7 @@
                 <ul>
                     <li><a href="http://mtafidc.ddns.com.br:8080/netFactor/jsp/nfrInicia.jsp" target="_blank">Portal Cedente</a></li>
                     <li><a href="http://mtafidc.ddns.com.br:8080/netFactor/jsp/nfdInicia.jsp" target="_blank">Portal Debenturista</a></li>
+                    <li><a href="https://investor-dash.qidtvm.com.br/" target="_blank">Portal Cotista</a></li>
                 </ul>
             </div>
             <div class="footer-col contact-col">

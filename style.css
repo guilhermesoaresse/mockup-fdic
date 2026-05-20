@@ -1625,6 +1625,19 @@ input[type="range"] {
     margin-top: 60px;
 }
 
+.product-tag-badge {
+    font-size: 0.75rem;
+    color: var(--primary-red);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    background: rgba(211, 47, 47, 0.1);
+    padding: 6px 12px;
+    border-radius: 20px;
+    display: inline-block;
+    margin-bottom: 15px;
+}
+
 .product-card {
     background: var(--secondary-dark);
     border-radius: 24px;
