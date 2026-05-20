@@ -1907,9 +1907,15 @@ input[type="range"] {
     .coffee-text-box p {
         font-size: 0.9rem !important;
     }
+    
+    /* Ajustes específicos do Formulário no iPhone */
     .contact-section {
         grid-template-columns: 1fr !important;
         gap: 40px !important;
+        padding: 60px 4% !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        box-sizing: border-box !important;
     }
     .contact-visual-wrapper {
         position: relative !important;
@@ -1917,6 +1923,37 @@ input[type="range"] {
         margin-bottom: 20px !important;
         max-width: 100% !important;
     }
+    .contact-form-container {
+        padding: 25px 15px !important;
+        border-radius: 20px !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        box-sizing: border-box !important;
+    }
+    .field {
+        min-width: 0 !important;
+        width: 100% !important;
+    }
+    .field input, .field textarea, .field select {
+        padding: 12px !important;
+        font-size: 0.95rem !important;
+        min-width: 0 !important;
+        width: 100% !important;
+        box-sizing: border-box !important;
+    }
+    .field label {
+        left: 12px !important;
+        top: 12px !important;
+        font-size: 0.95rem !important;
+    }
+    .field input:focus ~ label, 
+    .field input:not(:placeholder-shown) ~ label,
+    .field textarea:focus ~ label,
+    .field textarea:not(:placeholder-shown) ~ label {
+        top: -12px !important;
+        font-size: 0.8rem !important;
+    }
+
     .map-card-container {
         flex-direction: column !important;
         gap: 15px !important;
