@@ -409,6 +409,7 @@ html, body {
 /* Services */
 .services {
     padding: 100px 8%;
+    background: radial-gradient(circle at center, rgba(211, 47, 47, 0.03) 0%, transparent 60%);
 }
 
 .section-title {
@@ -424,7 +425,10 @@ html, body {
 }
 
 .service-card {
-    background: var(--secondary-dark);
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(24px);
+    -webkit-backdrop-filter: blur(24px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.2);
     padding: 50px 40px;
     border-radius: 20px;
     border: 1px solid var(--glass-border);
@@ -589,7 +593,10 @@ html, body {
 }
 
 .partner-card-mini {
-    background: var(--secondary-dark);
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(24px);
+    -webkit-backdrop-filter: blur(24px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.2);
     padding: 20px;
     border-radius: 12px;
     border: 1px solid var(--glass-border);
@@ -620,8 +627,8 @@ html, body {
 .ecosystem-summary {
     max-width: 900px;
     margin: 60px auto 0;
-    background: rgba(255, 255, 255, 0.03);
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.15);
     border-top: 2px solid var(--primary-red);
     padding: 35px 45px;
     border-radius: 20px;
@@ -708,7 +715,10 @@ html, body {
 }
 
 .news-item {
-    background: var(--secondary-dark);
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(24px);
+    -webkit-backdrop-filter: blur(24px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.2);
     border-radius: 15px;
     overflow: hidden;
     transition: 0.4s;
@@ -815,7 +825,10 @@ html, body {
 }
 
 .spread-calculator {
-    background: var(--secondary-dark);
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(24px);
+    -webkit-backdrop-filter: blur(24px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.2);
     padding: 40px;
     border-radius: 24px;
     border: 1px solid var(--glass-border);
@@ -1692,7 +1705,10 @@ input[type="range"] {
 }
 
 .product-card {
-    background: var(--secondary-dark);
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(24px);
+    -webkit-backdrop-filter: blur(24px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.2);
     border-radius: 24px;
     border: 1px solid var(--glass-border);
     overflow: hidden;
