@@ -614,7 +614,7 @@ html, body {
 
 .partner-card-mini:hover {
     border-color: var(--primary-red);
-    background: rgba(211, 47, 47, 0.02);
+    background: #fff5f5;
     transform: scale(1.05);
 }
 
