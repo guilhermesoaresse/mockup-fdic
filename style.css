@@ -34,19 +34,19 @@ html, body {
     top: 0;
     width: 100%;
     z-index: 1000;
-    background: var(--primary-dark);
-    border-bottom: 1px solid var(--glass-border);
+    background: #000000;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 }
 
 .ticker-wrap {
     width: 100%;
-    background: #f1f5f9;
+    background: #000000;
     overflow-x: auto;
     height: 38px;
     display: flex;
     align-items: center;
     justify-content: center;
-    border-bottom: 1px solid rgba(15, 23, 42, 0.08);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
 }
 
 .ticker {
@@ -83,8 +83,8 @@ html, body {
     justify-content: space-between;
     align-items: center;
     padding: 20px 8%;
-    background: var(--primary-dark);
-    border-bottom: 1px solid var(--glass-border);
+    background: #000000;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 }
 
 #main-logo {
@@ -312,7 +312,7 @@ html, body {
 /* Authority Section */
 .authority {
     padding: 100px 8%;
-    background: linear-gradient(to bottom, var(--primary-dark), #000);
+    background: var(--primary-dark);
 }
 
 .authority-centered {
@@ -552,7 +552,7 @@ html, body {
 /* Partners Expansion */
 .partners {
     padding: 120px 8%;
-    background: #000;
+    background: var(--primary-dark);
     position: relative;
 }
 
@@ -803,7 +803,7 @@ html, body {
 /* Contact Section - Premium & Interactive */
 .contact-section {
     padding: 120px 8%;
-    background: radial-gradient(circle at top right, #1a1f26, var(--primary-dark));
+    background: var(--primary-dark);
     display: grid;
     grid-template-columns: 1fr 1.2fr;
     gap: 80px;
@@ -2228,6 +2228,24 @@ input[type="range"] {
     background: #1e2430 !important;
     border-color: var(--primary-red) !important;
 }
+
+/* Black Header Text/Link Contrast rules */
+.top-nav .ticker-item {
+    color: #a3a3a3 !important;
+}
+
+.main-nav .nav-links a {
+    color: #a3a3a3 !important;
+}
+
+.main-nav .nav-links a:hover {
+    color: var(--primary-red) !important;
+}
+
+.main-nav .portal-access .btn-portal {
+    color: #ffffff !important;
+}
+
 
 
 
