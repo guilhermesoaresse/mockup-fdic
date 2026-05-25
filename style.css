@@ -2124,12 +2124,12 @@ input[type="range"] {
 
 #interest {
     background: #ffffff !important;
-    color: var(--text-light) !important;
+    color: #0f172a !important;
 }
 
 #interest option {
-    background: #ffffff;
-    color: var(--text-light);
+    background: #ffffff !important;
+    color: #0f172a !important;
 }
 
 /* ==========================================
@@ -2143,7 +2143,8 @@ input[type="range"] {
 .ecosystem-summary,
 .news-item,
 .spread-calculator,
-.contact-form-container {
+.contact-form-container,
+.map-card-container {
     color: #475569 !important;
 }
 
@@ -2155,7 +2156,8 @@ input[type="range"] {
 .news-item h3,
 .contact-form-container h3,
 .spread-calculator .range-value,
-.result-card strong {
+.result-card strong,
+.map-address-box h4 {
     color: #0f172a !important;
 }
 
@@ -2167,8 +2169,34 @@ input[type="range"] {
 .news-item p,
 .contact-form-container p,
 .spread-calculator label,
-.result-card span {
+.result-card span,
+.map-address-box p,
+.summary-text {
     color: #64748b !important;
+}
+
+.news-item .tag {
+    color: var(--primary-red) !important;
+    font-weight: 700;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+}
+
+.news-item .news-meta span {
+    color: #64748b !important;
+}
+
+.product-card-actions .btn-saiba-mais {
+    color: #1e293b !important;
+}
+
+.product-card-actions .btn-saiba-mais:hover {
+    color: var(--primary-red) !important;
+}
+
+.btn-map.google-maps {
+    color: #0f172a !important;
 }
 
 .contact-form-container input,
@@ -2190,6 +2218,7 @@ input[type="range"] {
     background: #ffffff !important;
     color: var(--primary-red) !important;
 }
+
 
 
 
