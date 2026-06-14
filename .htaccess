@@ -1,0 +1,48 @@
+# Enforcar HTTPS (Redirecionamento 301)
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteCond %{HTTPS} off
+    RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+</IfModule>
+
+# Bloquear acesso direto a arquivos de configuração e versionamento sensíveis
+<FilesMatch "^\.gitignore|config\.php|config\.php\.example$">
+    <IfModule mod_authz_core.c>
+        Require all denied
+    </IfModule>
+    <IfModule !mod_authz_core.c>
+        Order allow,deny
+        Deny from all
+    </IfModule>
+</FilesMatch>
+
+# Desabilitar a listagem de arquivos nos diretórios
+Options -Indexes
+
+# Compactação GZIP para acelerar carregamento de textos
+<IfModule mod_deflate.c>
+    AddOutputFilterByType DEFLATE text/html text/plain text/xml text/css text/javascript application/javascript application/json application/xml image/svg+xml
+</IfModule>
+
+# Cache de Navegador (Cache-Control) para arquivos estáticos (abre em milissegundos)
+<IfModule mod_expires.c>
+    ExpiresActive On
+    ExpiresDefault "access plus 1 month"
+    
+    # Imagens (1 ano de cache, dificilmente mudam de nome)
+    ExpiresByType image/jpg "access plus 1 year"
+    ExpiresByType image/jpeg "access plus 1 year"
+    ExpiresByType image/gif "access plus 1 year"
+    ExpiresByType image/png "access plus 1 year"
+    ExpiresByType image/svg+xml "access plus 1 year"
+    ExpiresByType image/x-icon "access plus 1 year"
+    
+    # Código e Estilos (1 mês)
+    ExpiresByType text/css "access plus 1 month"
+    ExpiresByType text/javascript "access plus 1 month"
+    ExpiresByType application/javascript "access plus 1 month"
+    
+    # HTML do site (sem cache para que atualizações reflitam na hora)
+    ExpiresByType text/html "access plus 0 seconds"
+</IfModule>
+

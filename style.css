@@ -218,7 +218,7 @@ html, body {
     border: 1px solid rgba(211, 47, 47, 0.2);
 }
 
-.glass-content h4 {
+.glass-content h2 {
     font-size: 1.1rem;
     color: #fff;
     margin-bottom: 8px;
@@ -371,7 +371,7 @@ html, body {
     flex-shrink: 0;
 }
 
-.badge-info h4 {
+.badge-info h3 {
     font-size: 1.15rem;
     color: var(--text-light);
     margin-bottom: 6px;
@@ -578,7 +578,7 @@ html, body {
     text-align: center;
 }
 
-.partner-cat-box h4 {
+.partner-cat-box h3 {
     font-size: 0.8rem;
     text-transform: uppercase;
     color: var(--text-dim);
@@ -943,7 +943,7 @@ input[type="range"] {
     position: relative;
 }
 
-.contact-form h3 {
+.contact-form h2 {
     font-size: 2rem;
     margin-bottom: 40px;
 }
@@ -997,7 +997,9 @@ input[type="range"] {
 .field input:focus ~ label, 
 .field input:not(:placeholder-shown) ~ label,
 .field textarea:focus ~ label,
-.field textarea:not(:placeholder-shown) ~ label {
+.field textarea:not(:placeholder-shown) ~ label,
+.field select:focus ~ label,
+.field select:valid ~ label {
     top: -10px;
     left: 10px;
     font-size: 0.75rem;
@@ -1103,7 +1105,7 @@ input[type="range"] {
     letter-spacing: 0.5px;
 }
 
-.footer-col h4 {
+.footer-col h3 {
     color: #fff;
     font-size: 1.1rem;
     font-family: 'Montserrat', sans-serif;
@@ -1113,7 +1115,7 @@ input[type="range"] {
     padding-bottom: 10px;
 }
 
-.footer-col h4::after {
+.footer-col h3::after {
     content: '';
     position: absolute;
     bottom: 0;
@@ -1197,7 +1199,7 @@ input[type="range"] {
 
 .disclaimer p {
     font-size: 0.75rem;
-    color: rgba(255, 255, 255, 0.3);
+    color: rgba(255, 255, 255, 0.6);
     line-height: 1.6;
     text-align: center;
 }
@@ -1294,7 +1296,7 @@ input[type="range"] {
     border: 1px solid rgba(211, 47, 47, 0.2);
 }
 
-.map-address-box h4 {
+.map-address-box h3 {
     color: var(--text-light);
     font-size: 1.2rem;
     margin-bottom: 5px;
@@ -1544,7 +1546,7 @@ input[type="range"] {
     .contact-form-container {
         padding: 35px 25px;
     }
-    .contact-form h3 {
+    .contact-form h2 {
         font-size: 1.8rem;
         margin-bottom: 30px;
     }
@@ -2128,16 +2130,16 @@ input[type="range"] {
     color: #cbd5e1 !important;
 }
 
-.institutional-glass-box h4,
+.institutional-glass-box h2,
 .service-card h3,
 .product-card-header h3,
-.auth-badge-card h4,
+.auth-badge-card h3,
 .partner-card-mini strong,
 .news-item h3,
-.contact-form-container h3,
+.contact-form-container h2,
 .spread-calculator .range-value,
 .result-card strong,
-.map-address-box h4 {
+.map-address-box h3 {
     color: #ffffff !important;
 }
 
@@ -2198,7 +2200,9 @@ input[type="range"] {
 .contact-form-container .field input:focus ~ label,
 .contact-form-container .field input:not(:placeholder-shown) ~ label,
 .contact-form-container .field textarea:focus ~ label,
-.contact-form-container .field textarea:not(:placeholder-shown) ~ label {
+.contact-form-container .field textarea:not(:placeholder-shown) ~ label,
+.contact-form-container .field select:focus ~ label,
+.contact-form-container .field select:valid ~ label {
     background: #11151a !important;
     color: #ffffff !important;
 }
@@ -2231,11 +2235,23 @@ input[type="range"] {
 
 /* Black Header Text/Link Contrast rules */
 .top-nav .ticker-item {
-    color: #a3a3a3 !important;
+    color: #cbd5e1 !important;
+}
+
+.ticker-wrap .up {
+    color: #4ade80 !important;
+}
+
+.ticker-wrap .down {
+    color: #f87171 !important;
+}
+
+.ticker-wrap .neutral {
+    color: #f59e0b !important;
 }
 
 .main-nav .nav-links a {
-    color: #a3a3a3 !important;
+    color: #cbd5e1 !important;
 }
 
 .main-nav .nav-links a:hover {
@@ -2246,6 +2262,119 @@ input[type="range"] {
     color: #ffffff !important;
 }
 
+/* ==========================================
+   Premium Modal WhatsApp Fallback Style
+   ========================================== */
+.premium-modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.85);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10000;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.4s ease;
+}
 
+.premium-modal-overlay.active {
+    opacity: 1;
+    pointer-events: auto;
+}
 
+.premium-modal-card {
+    background: #11151a;
+    border: 1px solid rgba(255, 255, 255, 0.1) !important;
+    box-shadow: 0 25px 60px rgba(0, 0, 0, 0.8), 0 0 30px rgba(211, 47, 47, 0.15) !important;
+    border-radius: 24px;
+    width: 90%;
+    max-width: 480px;
+    position: relative;
+    padding: 45px 35px;
+    transform: translateY(30px);
+    transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    box-sizing: border-box;
+}
 
+.premium-modal-overlay.active .premium-modal-card {
+    transform: translateY(0);
+}
+
+.premium-modal-close {
+    position: absolute;
+    top: 20px;
+    right: 25px;
+    background: none;
+    border: none;
+    color: #a3a3a3;
+    font-size: 2.2rem;
+    font-weight: 300;
+    cursor: pointer;
+    line-height: 1;
+    padding: 0;
+    transition: color 0.3s;
+}
+
+.premium-modal-close:hover {
+    color: var(--primary-red);
+}
+
+.premium-modal-body {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.premium-modal-icon {
+    margin-bottom: 25px;
+    display: flex;
+    justify-content: center;
+    animation: pulseRed 2.5s infinite;
+}
+
+@keyframes pulseRed {
+    0% { transform: scale(1); filter: drop-shadow(0 0 0 rgba(211, 47, 47, 0.4)); }
+    70% { transform: scale(1.06); filter: drop-shadow(0 0 15px rgba(211, 47, 47, 0.7)); }
+    100% { transform: scale(1); filter: drop-shadow(0 0 0 rgba(211, 47, 47, 0)); }
+}
+
+.premium-modal-body h3 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.8rem;
+    color: #fff !important;
+    margin-bottom: 15px;
+    font-weight: 700;
+}
+
+.premium-modal-body p {
+    font-size: 1.05rem;
+    color: #cbd5e1 !important;
+    line-height: 1.6;
+    margin: 0 0 12px 0;
+}
+
+.premium-modal-body .premium-modal-desc {
+    font-size: 0.95rem;
+    color: #a3a3a3 !important;
+    margin-bottom: 30px;
+}
+
+.btn-modal-wa {
+    background: #25d366 !important;
+    box-shadow: 0 10px 30px rgba(37, 211, 102, 0.3) !important;
+    text-decoration: none;
+    margin-top: 10px;
+}
+
+.btn-modal-wa:hover {
+    background: #20ba56 !important;
+    transform: translateY(-3px) !important;
+    box-shadow: 0 15px 40px rgba(37, 211, 102, 0.5) !important;
+}

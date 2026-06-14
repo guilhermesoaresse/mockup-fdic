@@ -1,0 +1,21 @@
+<?php
+/**
+ * Exemplo de arquivo de configuração para envio de e-mails via SMTP do Microsoft 365.
+ * Renomeie este arquivo para config.php e preencha com seus dados reais.
+ */
+return [
+    'smtp' => [
+        'host' => 'smtp.office365.com',
+        'port' => 587,
+        'encryption' => 'tls', // 'tls' (porta 587) ou 'ssl' (porta 465)
+        'auth' => true,
+        'username' => 'seu-email@seudominio.com.br',
+        'password' => 'sua-senha-ou-senha-de-app', // Importante: Se usar MFA, crie uma senha de aplicativo
+    ],
+    'mail' => [
+        'from_email' => 'seu-email@seudominio.com.br', // Deve ser o mesmo email do login do SMTP
+        'from_name' => 'Website Meta FIDC',
+        'to_email' => 'contato@metafidc.com.br', // Email que receberá os leads do formulário
+        'to_name' => 'Contato - Meta FIDC',
+    ]
+];

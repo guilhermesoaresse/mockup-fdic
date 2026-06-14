@@ -4,13 +4,55 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Meta FIDC | Inteligência Financeira e Antecipação</title>
+    <title>Meta FIDC | Inteligência Financeira e Antecipação de Recebíveis</title>
+
+    <!-- Meta Tags de SEO -->
+    <meta name="description"
+        content="Meta FIDC: Fundo de Investimento em Direitos Creditórios autorizado pela CVM. Antecipação de recebíveis com liquidez, segurança e agilidade para o fluxo de caixa da sua empresa.">
+    <meta name="keywords"
+        content="Meta FIDC, FIDC, antecipação de recebíveis, antecipar crédito, fundo de investimento de direitos creditórios, capital de giro, fluxo de caixa, Porto Alegre, finanças corporativas, JK Cobrança">
+    <meta name="author" content="Grupo Meta">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://www.metafidc.com.br/">
+
+    <!-- Open Graph / Facebook / LinkedIn / WhatsApp -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.metafidc.com.br/">
+    <meta property="og:title" content="Meta FIDC | Inteligência Financeira e Antecipação de Recebíveis">
+    <meta property="og:description"
+        content="Transforme seus recebíveis em fluxo de caixa imediato. Soluções estruturadas de FIDC regulamentadas pela CVM com segurança e governança para a sua empresa.">
+    <meta property="og:image" content="https://www.metafidc.com.br/meta_fidc_hero_mockup.png">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://www.metafidc.com.br/">
+    <meta property="twitter:title" content="Meta FIDC | Inteligência Financeira e Antecipação de Recebíveis">
+    <meta property="twitter:description"
+        content="Transforme seus recebíveis em fluxo de caixa imediato. Soluções estruturadas de FIDC com segurança e governança CVM.">
+    <meta property="twitter:image" content="https://www.metafidc.com.br/meta_fidc_hero_mockup.png">
+
     <link rel="stylesheet" href="style.css">
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="favicon.png" type="image/png">
+    <link rel="icon" href="favicon.png" type="image/png">
+
+    <!-- Pré-conexão de DNS para maior velocidade (Reduz Latença) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
+    <link rel="preconnect" href="https://economia.awesomeapi.com.br">
+    <link rel="preconnect" href="https://api.bcb.gov.br">
+    <link rel="preconnect" href="https://brapi.dev">
+
+    <link rel="preload" as="style"
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Montserrat:wght@700&display=swap">
+    <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Montserrat:wght@700&display=swap"
-        rel="stylesheet">
+        media="print" onload="this.media='all'">
+    <noscript>
+        <link rel="stylesheet"
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Montserrat:wght@700&display=swap">
+    </noscript>
 </head>
 
 <body>
@@ -27,7 +69,7 @@
         </div>
         <nav class="main-nav">
             <div class="logo">
-                <img src="meta_fidc_logo.png" alt="Meta FIDC Logo" id="main-logo">
+                <img src="meta_fidc_logo.png" alt="Meta FIDC Logo" id="main-logo" width="134" height="45">
             </div>
             <button class="mobile-menu-toggle" aria-label="Abrir menu mobile">
                 <span></span>
@@ -43,9 +85,15 @@
                     <li><a href="#contato">Contato</a></li>
                 </ul>
                 <div class="portal-access" style="display: flex; gap: 15px; align-items: center;">
-                    <a href="http://mtafidc.ddns.com.br:8080/netFactor/jsp/nfrInicia.jsp" target="_blank" class="btn-portal">Portal Cedente</a>
-                    <a href="http://mtafidc.ddns.com.br:8080/netFactor/jsp/nfdInicia.jsp" target="_blank" class="btn-portal" style="background: transparent; border: 1px solid var(--glass-border); color: var(--text-light);">Portal Debenturista</a>
-                    <a href="https://investor-dash.qidtvm.com.br/" target="_blank" class="btn-portal" style="background: transparent; border: 1px solid var(--glass-border); color: var(--text-light);">Portal Cotista</a>
+                    <a href="http://mtafidc.ddns.com.br:8080/netFactor/jsp/nfrInicia.jsp" target="_blank"
+                        class="btn-portal">Portal Cedente</a>
+                    <a href="http://mtafidc.ddns.com.br:8080/netFactor/jsp/nfdInicia.jsp" target="_blank"
+                        class="btn-portal"
+                        style="background: transparent; border: 1px solid var(--glass-border); color: var(--text-light);">Portal
+                        Debenturista</a>
+                    <a href="https://investor-dash.qidtvm.com.br/" target="_blank" class="btn-portal"
+                        style="background: transparent; border: 1px solid var(--glass-border); color: var(--text-light);">Portal
+                        Cotista</a>
                 </div>
             </div>
         </nav>
@@ -56,27 +104,35 @@
             <div class="hero-content">
                 <h1><span class="gradient-text">12 Anos</span> no Mercado de <br>Antecipação de Recebíveis</h1>
                 <div class="hero-desc-box">
-                    <p class="lead-text">A <strong>Meta FIDC</strong> transforma seus recebíveis em fluxo de caixa imediato. Como um Fundo de Investimentos em Direitos Creditórios regulamentado pela CVM, garantimos operações com máxima rapidez, segurança e transparência para o seu negócio.</p>
+                    <p class="lead-text">A <strong>Meta FIDC</strong> transforma seus recebíveis em fluxo de caixa
+                        imediato. Como um Fundo de Investimentos em Direitos Creditórios regulamentado pela CVM,
+                        garantimos operações com máxima rapidez, segurança e transparência para o seu negócio.</p>
                     <div class="institutional-glass-box">
                         <div class="glass-icon">
-                            <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="var(--primary-red)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10"/>
-                                <path d="m9 12 2 2 4-4"/>
+                            <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="var(--primary-red)"
+                                stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10" />
+                                <path d="m9 12 2 2 4-4" />
                             </svg>
                         </div>
                         <div class="glass-content">
-                            <h4>Governança e Lastro do Grupo</h4>
-                            <p>Respaldada pela solidez do <strong>Grupo Meta</strong> e da JK Cobrança (desde 2014), nossa estrutura une mais de uma década de expertise em análise de crédito à excelência exigida pelo mercado de capitais.</p>
+                            <h2>Governança e Lastro do Grupo</h2>
+                            <p>Respaldada pela solidez do <strong>Grupo Meta</strong> e da JK Cobrança (desde 2014),
+                                nossa estrutura une mais de uma década de expertise em análise de crédito à excelência
+                                exigida pelo mercado de capitais.</p>
                         </div>
                     </div>
                 </div>
                 <div class="hero-actions">
-                    <button class="btn-primary" onclick="document.getElementById('contato').scrollIntoView({behavior: 'smooth'})">Falar com Consultor</button>
+                    <button class="btn-primary"
+                        onclick="document.getElementById('contato').scrollIntoView({behavior: 'smooth'})">Falar com
+                        Consultor</button>
                 </div>
             </div>
             <div class="hero-visual">
                 <div class="hero-overlay"></div>
-                <img src="meta_fidc_hero_mockup.png" alt="Visão Corporativa Financeira">
+                <img src="meta_fidc_hero_mockup.webp" alt="Visão Corporativa Financeira da Meta FIDC"
+                    fetchpriority="high" width="1024" height="1024">
             </div>
         </section>
 
@@ -97,7 +153,7 @@
 
         <section id="produtos" class="services">
             <h2 class="section-title" data-aos="fade-up">Nossos Produtos</h2>
-            
+
             <div class="product-cards-grid">
                 <!-- 1. Antecipação de Recebíveis -->
                 <div class="product-card" data-aos="fade-up">
@@ -106,12 +162,21 @@
                         <h3>Antecipação de Recebíveis</h3>
                     </div>
                     <div class="product-card-body">
-                        <p>Antecipar recebíveis é transformar vendas a prazo em capital imediato. Na Meta FIDC, essa solução é oferecida com agilidade, segurança e condições personalizadas — ajudando empresas a manterem sua operação saudável e com liquidez, sem recorrer a empréstimos tradicionais.</p>
+                        <p>Antecipar recebíveis é transformar vendas a prazo em capital imediato. Na Meta FIDC, essa
+                            solução é oferecida com agilidade, segurança e condições personalizadas — ajudando empresas
+                            a manterem sua operação saudável e com liquidez, sem recorrer a empréstimos tradicionais.
+                        </p>
                         <div class="product-card-actions">
-                            <button class="btn-primary" onclick="document.getElementById('contato').scrollIntoView({behavior: 'smooth'})">ABRA SUA CONTA</button>
-                            <button class="btn-saiba-mais" onclick="document.getElementById('contato').scrollIntoView({behavior: 'smooth'})">
+                            <button class="btn-primary"
+                                onclick="document.getElementById('contato').scrollIntoView({behavior: 'smooth'})">ABRA
+                                SUA CONTA</button>
+                            <button class="btn-saiba-mais"
+                                onclick="document.getElementById('contato').scrollIntoView({behavior: 'smooth'})">
                                 Saiba mais
-                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2.5">
+                                    <path d="M5 12h14M12 5l7 7-7 7" />
+                                </svg>
                             </button>
                         </div>
                     </div>
@@ -124,12 +189,20 @@
                         <h3>Investimento</h3>
                     </div>
                     <div class="product-card-body">
-                        <p>A Meta FIDC opera através de Fundo de Investimento em Direitos Creditórios (FIDC) — que é também uma alternativa de renda fixa que une rentabilidade acima do CDI com lastro em operações reais da economia.</p>
+                        <p>A Meta FIDC opera através de Fundo de Investimento em Direitos Creditórios (FIDC) — que é
+                            também uma alternativa de renda fixa que une rentabilidade acima do CDI com lastro em
+                            operações reais da economia.</p>
                         <div class="product-card-actions">
-                            <button class="btn-primary" onclick="document.getElementById('contato').scrollIntoView({behavior: 'smooth'})">ABRA SUA CONTA</button>
-                            <button class="btn-saiba-mais" onclick="document.getElementById('contato').scrollIntoView({behavior: 'smooth'})">
+                            <button class="btn-primary"
+                                onclick="document.getElementById('contato').scrollIntoView({behavior: 'smooth'})">ABRA
+                                SUA CONTA</button>
+                            <button class="btn-saiba-mais"
+                                onclick="document.getElementById('contato').scrollIntoView({behavior: 'smooth'})">
                                 Saiba mais
-                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2.5">
+                                    <path d="M5 12h14M12 5l7 7-7 7" />
+                                </svg>
                             </button>
                         </div>
                     </div>
@@ -142,12 +215,20 @@
                         <h3>Conta Vinculada</h3>
                     </div>
                     <div class="product-card-body">
-                        <p>A Conta Vinculada Meta FIDC é uma solução criada para facilitar operações em que o controle sobre o recebimento é essencial, oferecendo previsibilidade e gestão integrada dos fluxos financeiros.</p>
+                        <p>A Conta Vinculada Meta FIDC é uma solução criada para facilitar operações em que o controle
+                            sobre o recebimento é essencial, oferecendo previsibilidade e gestão integrada dos fluxos
+                            financeiros.</p>
                         <div class="product-card-actions">
-                            <button class="btn-primary" onclick="document.getElementById('contato').scrollIntoView({behavior: 'smooth'})">ABRA SUA CONTA</button>
-                            <button class="btn-saiba-mais" onclick="document.getElementById('contato').scrollIntoView({behavior: 'smooth'})">
+                            <button class="btn-primary"
+                                onclick="document.getElementById('contato').scrollIntoView({behavior: 'smooth'})">ABRA
+                                SUA CONTA</button>
+                            <button class="btn-saiba-mais"
+                                onclick="document.getElementById('contato').scrollIntoView({behavior: 'smooth'})">
                                 Saiba mais
-                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2.5">
+                                    <path d="M5 12h14M12 5l7 7-7 7" />
+                                </svg>
                             </button>
                         </div>
                     </div>
@@ -160,12 +241,20 @@
                         <h3>Conta Vinculada Flex</h3>
                     </div>
                     <div class="product-card-body">
-                        <p>A Conta Vinculada Flex é uma evolução da Conta Vinculada tradicional, oferecendo ainda mais liberdade e controle sobre os recursos antecipados, sob medida para a dinâmica de sua empresa.</p>
+                        <p>A Conta Vinculada Flex é uma evolução da Conta Vinculada tradicional, oferecendo ainda mais
+                            liberdade e controle sobre os recursos antecipados, sob medida para a dinâmica de sua
+                            empresa.</p>
                         <div class="product-card-actions">
-                            <button class="btn-primary" onclick="document.getElementById('contato').scrollIntoView({behavior: 'smooth'})">ABRA SUA CONTA</button>
-                            <button class="btn-saiba-mais" onclick="document.getElementById('contato').scrollIntoView({behavior: 'smooth'})">
+                            <button class="btn-primary"
+                                onclick="document.getElementById('contato').scrollIntoView({behavior: 'smooth'})">ABRA
+                                SUA CONTA</button>
+                            <button class="btn-saiba-mais"
+                                onclick="document.getElementById('contato').scrollIntoView({behavior: 'smooth'})">
                                 Saiba mais
-                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2.5">
+                                    <path d="M5 12h14M12 5l7 7-7 7" />
+                                </svg>
                             </button>
                         </div>
                     </div>
@@ -174,75 +263,83 @@
         </section>
 
         <!-- Seção Diferenciais Restabelecida -->
-        <section id="servicos" class="services" style="padding-top: 50px; background: rgba(255,255,255,0.01); border-top: 1px solid var(--glass-border); border-bottom: 1px solid var(--glass-border);">
+        <section id="servicos" class="services"
+            style="padding-top: 50px; background: rgba(255,255,255,0.01); border-top: 1px solid var(--glass-border); border-bottom: 1px solid var(--glass-border);">
             <h2 class="section-title" data-aos="fade-up">Soluções que Geram Resultado</h2>
             <div class="service-grid">
                 <div class="service-card" data-aos="fade-up">
                     <div class="icon-wrapper">
                         <div class="icon-glow"></div>
                         <div class="icon-glass">
-                            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="url(#red-gradient-1)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="url(#red-gradient-1)"
+                                stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
                                 <defs>
                                     <linearGradient id="red-gradient-1" x1="0%" y1="0%" x2="100%" y2="100%">
                                         <stop offset="0%" stop-color="#ff4b4b" />
                                         <stop offset="100%" stop-color="#ffb8b8" />
                                     </linearGradient>
                                 </defs>
-                                <path d="M3 3v18h18"/>
-                                <path d="m19 9-5 5-4-4-3 3"/>
-                                <path d="M19 9V4h-5"/>
+                                <path d="M3 3v18h18" />
+                                <path d="m19 9-5 5-4-4-3 3" />
+                                <path d="M19 9V4h-5" />
                             </svg>
                         </div>
                     </div>
                     <h3>Consultoria de Crédito</h3>
-                    <p>Análise estratégica de portfólios e gestão de risco para empresas com alto volume de recebíveis.</p>
+                    <p>Análise estratégica de portfólios e gestão de risco para empresas com alto volume de recebíveis.
+                    </p>
                 </div>
                 <div class="service-card" data-aos="fade-up">
                     <div class="icon-wrapper">
                         <div class="icon-glow"></div>
                         <div class="icon-glass">
-                            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="url(#red-gradient-2)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="url(#red-gradient-2)"
+                                stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
                                 <defs>
                                     <linearGradient id="red-gradient-2" x1="0%" y1="0%" x2="100%" y2="100%">
                                         <stop offset="0%" stop-color="#ff4b4b" />
                                         <stop offset="100%" stop-color="#ffb8b8" />
                                     </linearGradient>
                                 </defs>
-                                <path d="M9 5v4"/>
-                                <rect width="4" height="6" x="7" y="9" rx="1"/>
-                                <path d="M9 15v2"/>
-                                <path d="M17 3v2"/>
-                                <rect width="4" height="8" x="15" y="5" rx="1"/>
-                                <path d="M17 13v3"/>
-                                <path d="M3 3v18h18"/>
+                                <path d="M9 5v4" />
+                                <rect width="4" height="6" x="7" y="9" rx="1" />
+                                <path d="M9 15v2" />
+                                <path d="M17 3v2" />
+                                <rect width="4" height="8" x="15" y="5" rx="1" />
+                                <path d="M17 13v3" />
+                                <path d="M3 3v18h18" />
                             </svg>
                         </div>
                     </div>
                     <h3>Experiência de Mercado</h3>
-                    <p>Com mais de 30 anos de experiência em gestão de créditos e ativos empresariais assegurando resultados sólidos e confiáveis para seus clientes.</p>
+                    <p>Com mais de 30 anos de experiência em gestão de créditos e ativos empresariais assegurando
+                        resultados sólidos e confiáveis para seus clientes.</p>
                 </div>
                 <div class="service-card" data-aos="fade-up">
                     <div class="icon-wrapper">
                         <div class="icon-glow"></div>
                         <div class="icon-glass">
-                            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="url(#red-gradient-3)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="url(#red-gradient-3)"
+                                stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
                                 <defs>
                                     <linearGradient id="red-gradient-3" x1="0%" y1="0%" x2="100%" y2="100%">
                                         <stop offset="0%" stop-color="#ff4b4b" />
                                         <stop offset="100%" stop-color="#ffb8b8" />
                                     </linearGradient>
                                 </defs>
-                                <path d="m11 17 2 2a1 1 0 1 0 3-3"/>
-                                <path d="m14 14 2.5 2.5a1 1 0 1 0 3-3l-3.88-3.88a3 3 0 0 0-4.24 0l-.88.88a1 1 0 1 1-3-3l2.81-2.81a5.79 5.79 0 0 1 7.06-.87l.47.28a2 2 0 0 0 1.42.25L21 4"/>
-                                <path d="m21 3-6 6"/>
-                                <path d="m22 14-4.7 4.7a1 1 0 0 1-1.4 0l-5.6-5.6a1 1 0 0 1 0-1.4l1.3-1.3"/>
-                                <path d="M5 14v7"/>
-                                <path d="M2 14h6"/>
+                                <path d="m11 17 2 2a1 1 0 1 0 3-3" />
+                                <path
+                                    d="m14 14 2.5 2.5a1 1 0 1 0 3-3l-3.88-3.88a3 3 0 0 0-4.24 0l-.88.88a1 1 0 1 1-3-3l2.81-2.81a5.79 5.79 0 0 1 7.06-.87l.47.28a2 2 0 0 0 1.42.25L21 4" />
+                                <path d="m21 3-6 6" />
+                                <path d="m22 14-4.7 4.7a1 1 0 0 1-1.4 0l-5.6-5.6a1 1 0 0 1 0-1.4l1.3-1.3" />
+                                <path d="M5 14v7" />
+                                <path d="M2 14h6" />
                             </svg>
                         </div>
                     </div>
                     <h3>Atendimento Personalizado</h3>
-                    <p>Buscamos agilidade no atendimento de nossos clientes, agregando soluções financeiras que atendem exatamente às suas necessidades.</p>
+                    <p>Buscamos agilidade no atendimento de nossos clientes, agregando soluções financeiras que atendem
+                        exatamente às suas necessidades.</p>
                 </div>
             </div>
         </section>
@@ -250,20 +347,22 @@
         <section class="authority">
             <div class="authority-centered" data-aos="fade-up">
                 <h2 class="section-title">Respaldo Financeiro e Solidez Corporativa</h2>
-                <p class="auth-lead">A Meta FIDC não é apenas uma empresa de antecipação; somos um parceiro estratégico com profundo conhecimento do sistema financeiro nacional. Nossa estrutura permite agilidade na ponta e segurança na governança.</p>
-                
+                <p class="auth-lead">A Meta FIDC não é apenas uma empresa de antecipação; somos um parceiro estratégico
+                    com profundo conhecimento do sistema financeiro nacional. Nossa estrutura permite agilidade na ponta
+                    e segurança na governança.</p>
+
                 <div class="auth-badges">
                     <div class="auth-badge-card">
                         <div class="badge-icon">📍</div>
                         <div class="badge-info">
-                            <h4>Sede Porto Alegre</h4>
+                            <h3>Sede Porto Alegre</h3>
                             <p>Av. Nilo Peçanha, 3245 - Salas 911 e 912</p>
                         </div>
                     </div>
                     <div class="auth-badge-card">
                         <div class="badge-icon">🛠️</div>
                         <div class="badge-info">
-                            <h4>Tecnologia de Ponta</h4>
+                            <h3>Tecnologia de Ponta</h3>
                             <p>Tecnologia proprietária para gestão de recebíveis</p>
                         </div>
                     </div>
@@ -275,50 +374,61 @@
             <h2 class="section-title" data-aos="fade-up">Ecossistema de Governança</h2>
             <div class="partner-categories" data-aos="fade-up">
                 <div class="partner-cat-box">
-                    <h4>Administração e Custódia</h4>
+                    <h3>Administração e Custódia</h3>
                     <div class="partner-items-grid">
                         <a href="https://qitech.com.br" target="_blank" class="partner-card-mini">
-                            <img src="public/QiTECh.svg" alt="QI Tech Logo" style="max-height: 40px; width: auto; object-fit: contain; margin-bottom: 5px;">
+                            <img src="public/QiTECh.svg" alt="QI Tech Logo" loading="lazy" width="175" height="40"
+                                style="max-height: 40px; width: auto; object-fit: contain; margin-bottom: 5px;">
                             <strong>QI Tech</strong>
                             <span>Administradora e Custodiante</span>
                         </a>
                     </div>
                 </div>
                 <div class="partner-cat-box">
-                    <h4>Gestão de Ativos</h4>
+                    <h3>Gestão de Ativos</h3>
                     <div class="partner-items-grid">
                         <div class="partner-card-mini" style="cursor: default;">
-                            <img src="public/gestor de ativos-jk.jpg" alt="JK Cobrança Logo" style="max-height: 45px; width: auto; object-fit: contain; margin-bottom: 5px; border-radius: 50%;">
+                            <img src="public/gestor de ativos-jk.jpg" alt="JK Cobrança Logo" loading="lazy" width="48"
+                                height="45"
+                                style="max-height: 45px; width: auto; object-fit: contain; margin-bottom: 5px; border-radius: 50%;">
                             <strong>JK Cobrança</strong>
                             <span>Consultoria de crédito e cobrança</span>
                         </div>
                         <a href="https://terconbr.com.br/" target="_blank" class="partner-card-mini">
-                            <img src="public/logo-tercon-branco.png" alt="Tercon Asset Logo" style="max-height: 40px; width: auto; object-fit: contain; margin-bottom: 5px;">
+                            <img src="public/logo-tercon-branco.webp" alt="Tercon Asset Logo" loading="lazy" width="109"
+                                height="40"
+                                style="max-height: 40px; width: auto; object-fit: contain; margin-bottom: 5px;">
                             <strong>Tercon Asset</strong>
                             <span>Gestora e estruturadora</span>
                         </a>
                     </div>
                 </div>
                 <div class="partner-cat-box">
-                    <h4>Tecnologia</h4>
+                    <h3>Tecnologia</h3>
                     <div class="partner-items-grid">
                         <a href="https://orderby.com.br" target="_blank" class="partner-card-mini">
-                            <img src="public/WhatsApp Image 2026-05-12 at 16.55.37.jpeg" alt="Order By Logo" style="max-height: 40px; width: auto; object-fit: contain; border-radius: 4px; margin-bottom: 5px;">
+                            <img src="public/whatsapp_logo_partner.webp" alt="Order By Logo" loading="lazy" width="100"
+                                height="40"
+                                style="max-height: 40px; width: auto; object-fit: contain; border-radius: 4px; margin-bottom: 5px;">
                             <strong>Order By</strong>
                             <span>Tecnologia e Gestão</span>
                         </a>
                     </div>
                 </div>
                 <div class="partner-cat-box">
-                    <h4>Jurídico</h4>
+                    <h3>Jurídico</h3>
                     <div class="partner-items-grid">
                         <div class="partner-card-mini" style="cursor: default;">
-                            <img src="public/acessoria-juridica.png" alt="Bufrem Neves Advogados Logo" style="max-height: 40px; width: auto; object-fit: contain; border-radius: 4px; margin-bottom: 5px; background: white; padding: 5px;">
+                            <img src="public/assessoria_juridica.webp" alt="Bufrem Neves Advogados Logo" loading="lazy"
+                                width="97" height="40"
+                                style="max-height: 40px; width: auto; object-fit: contain; border-radius: 4px; margin-bottom: 5px; background: white; padding: 5px;">
                             <strong>Bufrem Neves</strong>
                             <span>Assessoria jurídica</span>
                         </div>
                         <div class="partner-card-mini" style="cursor: default;">
-                            <img src="public/abf_logo.png" alt="ABF Advogados Logo" style="max-height: 40px; width: auto; object-fit: contain; border-radius: 4px; margin-bottom: 5px; background: white; padding: 5px;">
+                            <img src="public/abf_logo.webp" alt="ABF Advogados Logo" loading="lazy" width="40"
+                                height="40"
+                                style="max-height: 40px; width: auto; object-fit: contain; border-radius: 4px; margin-bottom: 5px; background: white; padding: 5px;">
                             <strong>ABF Advogados</strong>
                             <span>Assessoria jurídica</span>
                         </div>
@@ -327,19 +437,26 @@
             </div>
             <div class="ecosystem-summary" data-aos="fade-up">
                 <div class="summary-icon">🏛️</div>
-                <p class="summary-text">Nossa estrutura operacional é cercada pelos maiores players de infraestrutura do mercado financeiro. Isso garante <span class="highlight-pill">segurança jurídica</span>, <span class="highlight-pill">transparência absoluta</span> e <span class="highlight-pill">processos auditados</span> em cada real transacionado dentro da Meta FIDC.</p>
+                <p class="summary-text">Nossa estrutura operacional é cercada pelos maiores players de infraestrutura do
+                    mercado financeiro. Isso garante <span class="highlight-pill">segurança jurídica</span>, <span
+                        class="highlight-pill">transparência absoluta</span> e <span class="highlight-pill">processos
+                        auditados</span> em cada real transacionado dentro da Meta FIDC.</p>
             </div>
         </section>
 
         <section id="mercado" class="news">
             <div class="news-header">
-                <h2 data-aos="fade-up">Market Insights <span style="font-size: 0.8rem; font-weight: 400; color: var(--primary-red); background: rgba(211,47,47,0.1); padding: 4px 10px; border-radius: 12px; margin-left: 15px;">Powered by InfoMoney & Bloomberg</span></h2>
-                <a href="https://www.infomoney.com.br" target="_blank" class="read-more" data-aos="fade-up">Ver todas as análises</a>
+                <h2 data-aos="fade-up">Market Insights <span
+                        style="font-size: 0.8rem; font-weight: 400; color: var(--primary-red); background: rgba(211,47,47,0.1); padding: 4px 10px; border-radius: 12px; margin-left: 15px;">Powered
+                        by G1 Economia & Bloomberg</span></h2>
+                <a href="https://g1.globo.com/economia/" target="_blank" class="read-more" data-aos="fade-up">Ver todas
+                    as análises</a>
             </div>
             <div class="news-grid" id="news-container">
                 <article class="news-item" data-aos="fade-up">
                     <div class="news-image">
-                        <img src="market_selic_economy.png" alt="Selic e Mercado de Crédito">
+                        <img src="market_selic_economy.webp" alt="Selic e Mercado de Crédito" width="1024" height="1024"
+                            loading="lazy">
                     </div>
                     <div class="news-content">
                         <div class="news-meta">
@@ -355,7 +472,7 @@
 
                 <article class="news-item" data-aos="fade-up">
                     <div class="news-image">
-                        <img src="market_agro_fidc.png" alt="Agro e FIDCs">
+                        <img src="market_agro_fidc.webp" alt="Agro e FIDCs" width="1024" height="1024" loading="lazy">
                     </div>
                     <div class="news-content">
                         <div class="news-meta">
@@ -371,7 +488,8 @@
 
                 <article class="news-item" data-aos="fade-up">
                     <div class="news-image">
-                        <img src="market_tech_finance.png" alt="Tecnologia no FIDC">
+                        <img src="market_tech_finance.webp" alt="Tecnologia no FIDC" width="1024" height="1024"
+                            loading="lazy">
                     </div>
                     <div class="news-content">
                         <div class="news-meta">
@@ -390,43 +508,45 @@
 
     <section id="contato" class="contact-section">
         <div class="contact-visual-wrapper" data-aos="fade-up">
-            <img src="public/meta_fidc_contact_visual.png" alt="Meta FIDC Crescimento Financeiro" class="contact-visual-img">
+            <img src="public/meta_fidc_contact_visual.webp" alt="Meta FIDC Crescimento Financeiro"
+                class="contact-visual-img" loading="lazy" width="1024" height="1024">
         </div>
 
         <div class="contact-form-container" data-aos="fade-up">
             <form class="contact-form" id="main-contact-form">
-                <h3>Seja nosso cliente</h3>
+                <h2>Seja nosso cliente</h2>
                 <div class="form-row">
                     <div class="field">
-                        <input type="text" id="name" placeholder=" " required>
+                        <input type="text" id="name" name="name" placeholder=" " required>
                         <label for="name">Nome Completo</label>
                     </div>
                     <div class="field">
-                        <input type="email" id="email" placeholder=" " required>
+                        <input type="email" id="email" name="email" placeholder=" " required>
                         <label for="email">E-mail Corporativo</label>
                     </div>
                 </div>
                 <div class="form-row">
                     <div class="field">
-                        <input type="text" id="company" placeholder=" " required>
+                        <input type="text" id="company" name="company" placeholder=" " required>
                         <label for="company">Empresa / CNPJ</label>
                     </div>
                     <div class="field">
-                        <input type="tel" id="phone" placeholder=" " required>
+                        <input type="tel" id="phone" name="phone" placeholder=" " required>
                         <label for="phone">WhatsApp</label>
                     </div>
                 </div>
                 <div class="field">
-                    <select id="interest" required
+                    <select id="interest" name="interest" required
                         style="background: rgba(255,255,255,0.02); color: #fff; border: 1px solid var(--glass-border); padding: 15px; width: 100%; border-radius: 8px;">
-                        <option value="" disabled selected>Assunto de interesse</option>
+                        <option value="" disabled selected hidden></option>
                         <option value="antecipacao">Antecipação de Recebíveis</option>
                         <option value="fidc">Estruturação de FIDC</option>
                         <option value="investimento">Investimento</option>
                     </select>
+                    <label for="interest">Assunto de interesse</label>
                 </div>
                 <div class="field">
-                    <textarea id="message" placeholder=" "></textarea>
+                    <textarea id="message" name="message" placeholder=" "></textarea>
                     <label for="message">Fale sobre sua necessidade...</label>
                 </div>
                 <button type="submit" class="btn-submit">
@@ -450,29 +570,47 @@
             <div class="coffee-overlay"></div>
             <div class="coffee-text-box">
                 <h3>HOM Nilo Business</h3>
-                <p>Agende uma visita e venha tomar um café conosco para estruturarmos a melhor solução financeira para sua empresa.</p>
+                <p>Agende uma visita e venha tomar um café conosco para estruturarmos a melhor solução financeira para
+                    sua empresa.</p>
             </div>
         </div>
 
         <div class="map-card-container">
             <div class="map-wrapper">
-                <iframe src="https://maps.google.com/maps?q=Av.+Nilo+Pe%C3%A7anha,+3245+-+Porto+Alegre&t=m&z=16&output=embed&iwloc=near" width="100%" height="380" style="border:0; border-radius: 16px; filter: invert(90%) hue-rotate(180deg) contrast(120%);" allowfullscreen="" loading="lazy"></iframe>
+                <iframe
+                    src="https://maps.google.com/maps?q=Av.+Nilo+Pe%C3%A7anha,+3245+-+Porto+Alegre&t=m&z=16&output=embed&iwloc=near"
+                    width="100%" height="380"
+                    style="border:0; border-radius: 16px; filter: invert(90%) hue-rotate(180deg) contrast(120%);"
+                    allowfullscreen="" loading="lazy"
+                    title="Mapa de localização da sede da Meta FIDC em Porto Alegre"></iframe>
             </div>
             <div class="map-info-actions">
                 <div class="map-address-box">
                     <span class="map-icon">📍</span>
                     <div>
-                        <h4>HOM Nilo Business</h4>
-                        <p>Av. Nilo Peçanha, 3245 - Salas 911 e 912<br>Chácara das Pedras, Porto Alegre - RS, 91330-001</p>
+                        <h3>HOM Nilo Business</h3>
+                        <p>Av. Nilo Peçanha, 3245 - Salas 911 e 912<br>Chácara das Pedras, Porto Alegre - RS, 91330-001
+                        </p>
                     </div>
                 </div>
                 <div class="map-buttons">
-                    <a href="https://maps.google.com/?q=Av.+Nilo+Pe%C3%A7anha,+3245+-+Porto+Alegre" target="_blank" class="btn-map google-maps">
-                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                    <a href="https://maps.google.com/?q=Av.+Nilo+Pe%C3%A7anha,+3245+-+Porto+Alegre" target="_blank"
+                        class="btn-map google-maps">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                            <circle cx="12" cy="10" r="3"></circle>
+                        </svg>
                         Abrir no Google Maps
                     </a>
-                    <a href="https://waze.com/ul?q=Av.+Nilo+Pe%C3%A7anha,+3245&navigate=yes" target="_blank" class="btn-map waze">
-                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><path d="M8 12h8"></path><path d="M12 8v8"></path></svg>
+                    <a href="https://waze.com/ul?q=Av.+Nilo+Pe%C3%A7anha,+3245&navigate=yes" target="_blank"
+                        class="btn-map waze">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <path d="M8 12h8"></path>
+                            <path d="M12 8v8"></path>
+                        </svg>
                         Navegar pelo Waze
                     </a>
                 </div>
@@ -485,30 +623,35 @@
     <footer class="premium-footer">
         <div class="footer-grid">
             <div class="footer-col brand-col">
-                <img src="meta_fidc_logo.png" alt="Meta FIDC Logo" class="footer-logo-img">
-                <p class="brand-desc">Mais de uma década impulsionando grandes empresas com inteligência financeira, solidez de governança e agilidade estratégica.</p>
+                <img src="meta_fidc_logo.png" alt="Meta FIDC Logo" class="footer-logo-img" loading="lazy" width="134"
+                    height="45">
+                <p class="brand-desc">Mais de uma década impulsionando grandes empresas com inteligência financeira,
+                    solidez de governança e agilidade estratégica.</p>
             </div>
             <div class="footer-col nav-col">
-                <h4>Navegação</h4>
+                <h3>Navegação</h3>
                 <ul>
                     <li><a href="#home">Home</a></li>
                     <li><a href="#produtos">Produtos</a></li>
                     <li><a href="#servicos">Diferenciais</a></li>
-                    <li><a href="#mercado">Mercado</a></li>
+                    <li><a href="#mercado">Market Insights</a></li>
                     <li><a href="#contato">Contato</a></li>
                 </ul>
             </div>
             <div class="footer-col portal-col">
-                <h4>Acesso aos Portais</h4>
+                <h3>Acesso aos Portais</h3>
                 <ul>
-                    <li><a href="http://mtafidc.ddns.com.br:8080/netFactor/jsp/nfrInicia.jsp" target="_blank">Portal Cedente</a></li>
-                    <li><a href="http://mtafidc.ddns.com.br:8080/netFactor/jsp/nfdInicia.jsp" target="_blank">Portal Debenturista</a></li>
+                    <li><a href="http://mtafidc.ddns.com.br:8080/netFactor/jsp/nfrInicia.jsp" target="_blank">Portal
+                            Cedente</a></li>
+                    <li><a href="http://mtafidc.ddns.com.br:8080/netFactor/jsp/nfdInicia.jsp" target="_blank">Portal
+                            Debenturista</a></li>
                     <li><a href="https://investor-dash.qidtvm.com.br/" target="_blank">Portal Cotista</a></li>
                 </ul>
             </div>
             <div class="footer-col contact-col">
-                <h4>Sede Corporativa</h4>
-                <p class="contact-item"><span class="icon">📍</span> Av. Nilo Peçanha, 3245 - Salas 911 e 912 <br> HOM Nilo Business, Porto Alegre - RS</p>
+                <h3>Sede Corporativa</h3>
+                <p class="contact-item"><span class="icon">📍</span> Av. Nilo Peçanha, 3245 - Salas 911 e 912 <br> HOM
+                    Nilo Business, Porto Alegre - RS</p>
                 <p class="contact-item"><span class="icon">📞</span> (51) 3391.3020 / (51) 3391.4020</p>
                 <p class="contact-item"><span class="icon">✉️</span> contato@metafidc.com.br</p>
             </div>
@@ -518,10 +661,39 @@
                 <p class="copyright">&copy; 2026 Grupo Meta | Meta FIDC. Todos os direitos reservados.</p>
             </div>
             <div class="disclaimer">
-                <p>*Fundo de Investimento em Direitos Creditórios regulado pela CVM. Fundos de investimento não contam com garantia do administrador, do gestor da carteira, de qualquer mecanismo de seguro ou do Fundo Garantidor de Créditos - FGC.</p>
+                <p>*Fundo de Investimento em Direitos Creditórios regulado pela CVM. Fundos de investimento não contam
+                    com garantia do administrador, do gestor da carteira, de qualquer mecanismo de seguro ou do Fundo
+                    Garantidor de Créditos - FGC.</p>
             </div>
         </div>
     </footer>
+
+    <!-- Modal WhatsApp Fallback (Premium Dark/Glass Red Theme) -->
+    <div id="whatsapp-modal" class="premium-modal-overlay">
+        <div class="premium-modal-card">
+            <button class="premium-modal-close" id="close-whatsapp-modal" aria-label="Fechar">&times;</button>
+            <div class="premium-modal-body">
+                <div class="premium-modal-icon">
+                    <svg width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="var(--primary-red)"
+                        stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+                    </svg>
+                </div>
+                <h3>Atendimento WhatsApp</h3>
+                <p>Nossos canais de e-mail automatizados estão passando por uma manutenção de segurança temporária.</p>
+                <p class="premium-modal-desc">Você pode prosseguir com sua solicitação de abertura de conta agora mesmo
+                    falando diretamente com um de nossos consultores via WhatsApp.</p>
+                <a href="#" id="whatsapp-modal-btn" target="_blank" class="btn-submit btn-modal-wa">
+                    FALAR NO WHATSAPP
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <line x1="5" y1="12" x2="19" y2="12"></line>
+                        <polyline points="12 5 19 12 12 19"></polyline>
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </div>
 
     <script>
         // Simple Intersection Observer for AOS
@@ -535,24 +707,62 @@
 
         document.querySelectorAll('[data-aos]').forEach(el => observer.observe(el));
 
-        // Form Submission visual feedback
-        document.getElementById('main-contact-form').addEventListener('submit', (e) => {
+        // Close WhatsApp Modal Events
+        document.getElementById('close-whatsapp-modal').addEventListener('click', () => {
+            document.getElementById('whatsapp-modal').classList.remove('active');
+        });
+        document.getElementById('whatsapp-modal').addEventListener('click', (e) => {
+            if (e.target === document.getElementById('whatsapp-modal')) {
+                document.getElementById('whatsapp-modal').classList.remove('active');
+            }
+        });
+
+        // Form Submission safe AJAX integration (PHP backend connection)
+        document.getElementById('main-contact-form').addEventListener('submit', async (e) => {
             e.preventDefault();
-            const btn = e.target.querySelector('button');
+            const form = e.target;
+            const btn = form.querySelector('button');
             const originalText = btn.innerHTML;
+
             btn.innerHTML = 'ENVIANDO...';
             btn.disabled = true;
 
-            setTimeout(() => {
-                btn.innerHTML = 'SOLICITAÇÃO ENVIADA! ✓';
-                btn.style.background = 'var(--success-green)';
-                e.target.reset();
+            try {
+                const formData = new FormData(form);
+                const response = await fetch('send-email.php', {
+                    method: 'POST',
+                    body: formData
+                });
+
+                const data = await response.json();
+
+                if (response.ok && data.status === 'success') {
+                    btn.innerHTML = 'SOLICITAÇÃO ENVIADA! ✓';
+                    btn.style.background = 'var(--success-green)';
+                    form.reset();
+                } else {
+                    throw new Error(data.message || 'Erro desconhecido');
+                }
+            } catch (error) {
+                console.error('Erro ao enviar formulário:', error);
+                btn.innerHTML = 'ERRO AO ENVIAR ✗';
+                btn.style.background = '#d32f2f';
+
+                // Abre o modal de WhatsApp com dados personalizados do Lead
+                const leadName = form.querySelector('#name').value;
+                const leadCompany = form.querySelector('#company').value;
+                const waMessage = encodeURIComponent(`Olá! Meu nome é ${leadName} da empresa ${leadCompany}. Tentei enviar o formulário pelo site e gostaria de falar com um consultor sobre soluções financeiras da Meta FIDC.`);
+                const waUrl = `https://api.whatsapp.com/send?phone=555133913020&text=${waMessage}`;
+
+                document.getElementById('whatsapp-modal-btn').setAttribute('href', waUrl);
+                document.getElementById('whatsapp-modal').classList.add('active');
+            } finally {
                 setTimeout(() => {
                     btn.innerHTML = originalText;
-                    btn.style.background = 'var(--primary-red)';
+                    btn.style.background = ''; // retorna para o CSS padrão
                     btn.disabled = false;
-                }, 3000);
-            }, 1500);
+                }, 4000);
+            }
         });
 
         async function fetchMarketData() {
@@ -586,10 +796,10 @@
                     const brapiRes = await fetch(`https://api.allorigins.win/get?url=${brapiUrl}`);
                     const brapiProxy = await brapiRes.json();
                     const brapiData = JSON.parse(brapiProxy.contents);
-                    
+
                     const ibov = brapiData.results.find(r => r.symbol === '^BVSP');
                     const nasdaq = brapiData.results.find(r => r.symbol === '^IXIC');
-                    
+
                     if (ibov && nasdaq) {
                         updateTicker('ticker-ibov', formatPoints(ibov.regularMarketPrice), ibov.regularMarketChangePercent);
                         updateTicker('ticker-nasdaq', formatPoints(nasdaq.regularMarketPrice), nasdaq.regularMarketChangePercent);
@@ -656,54 +866,63 @@
 
         async function fetchMarketNews() {
             try {
-                const response = await fetch('https://api.rss2json.com/v1/api.json?rss_url=https://www.infomoney.com.br/mercados/feed/');
+                // Chama o backend local get-news.php para obter o feed de economia com cache e sem problemas de CORS
+                const response = await fetch('get-news.php');
                 const data = await response.json();
-                
-                if (data.status === 'ok' && data.items.length > 0) {
+
+                if (data.status === 'ok' && data.items && data.items.length > 0) {
                     const container = document.getElementById('news-container');
                     container.innerHTML = ''; // Limpa os mocks de fallback
-                    
-                    // Pegamos as 3 primeiras notícias mais recentes
+
+                    // Exibe as 3 notícias mais recentes
                     const items = data.items.slice(0, 3);
-                    
+
                     items.forEach(item => {
-                        const dateStr = new Date(item.pubDate).toLocaleDateString('pt-BR', { day: '2-digit', month: 'short' });
-                        
-                        // Extração avançada de imagem (busca no thumbnail, enclosure ou extrai de dentro do HTML da matéria)
-                        let imgUrl = item.thumbnail || item.enclosure?.link;
-                        
-                        if (!imgUrl || imgUrl.trim() === '') {
-                            const imgMatch = (item.content || item.description || '').match(/<img[^>]+src="([^">]+)"/i);
-                            if (imgMatch && imgMatch[1]) {
-                                imgUrl = imgMatch[1];
+                        let dateStr = 'Recente';
+                        try {
+                            const parsedDate = new Date(item.pubDate);
+                            if (!isNaN(parsedDate.getTime())) {
+                                dateStr = parsedDate.toLocaleDateString('pt-BR', { day: '2-digit', month: 'short' });
                             }
-                        }
-                        
+                        } catch (e) { }
+
+                        let imgUrl = item.thumbnail;
                         if (!imgUrl || imgUrl.trim() === '') {
-                            imgUrl = 'market_selic_economy.png'; // Fallback final
+                            imgUrl = 'market_selic_economy.webp'; // Fallback final
                         }
-                        
+
+                        // Garante que a descrição fique curta e não quebre palavras no meio no layout
+                        let desc = item.description || '';
+                        if (desc.length > 150) {
+                            desc = desc.substring(0, 147);
+                            const lastSpace = desc.lastIndexOf(' ');
+                            if (lastSpace !== -1) {
+                                desc = desc.substring(0, lastSpace);
+                            }
+                            desc += '...';
+                        }
+
                         const article = document.createElement('article');
                         article.className = 'news-item';
                         article.innerHTML = `
                             <div class="news-image">
-                                <img src="${imgUrl}" alt="${item.title}" onerror="this.src='market_selic_economy.png'">
+                                <img src="${imgUrl}" alt="${item.title}" loading="lazy" onerror="this.src='market_selic_economy.webp'" width="1024" height="1024">
                             </div>
                             <div class="news-content">
                                 <div class="news-meta">
-                                    <span class="tag">Mercado Financeiro</span>
+                                    <span class="tag">Economia</span>
                                     <span style="font-size: 0.7rem; color: var(--text-dim);">${dateStr}</span>
                                 </div>
                                 <h3 style="font-size: 1.2rem; margin-bottom: 10px; line-height: 1.4;">${item.title}</h3>
-                                <p style="font-size: 0.95rem; line-height: 1.6; color: var(--text-dim); margin-bottom: 20px;">${item.description.replace(/<[^>]*>?/gm, '').substring(0, 115)}...</p>
-                                <a href="${item.link}" target="_blank" class="read-more">Ler Artigo no InfoMoney</a>
+                                <p style="font-size: 0.95rem; line-height: 1.6; color: var(--text-dim); margin-bottom: 20px;">${desc}</p>
+                                <a href="${item.link}" target="_blank" class="read-more">Ler Artigo Completo</a>
                             </div>
                         `;
                         container.appendChild(article);
                     });
                 }
             } catch (error) {
-                console.error('Erro ao buscar notícias do InfoMoney, mantendo fallback estático:', error);
+                console.error('Erro ao buscar notícias de economia, mantendo fallback estático:', error);
             }
         }
 
